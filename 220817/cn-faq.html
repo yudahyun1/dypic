@@ -1,0 +1,250 @@
+<style>
+/* Component Name */
+.magician_faq .magician_faq_wrap {
+  padding: 100px 60px 100px;
+  max-width: 802px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.magician_faq .magician_faq_tit {
+  font-family: 'Samsung Sharp Sans', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  padding-bottom: 80px;
+}
+
+.magician_faq .magician_faq_list {
+  max-width: 802px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.magician_faq .magician_faq_item {
+  position: relative;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.magician_faq .magician_faq_item:first-child {
+  padding-top: 0;
+}
+
+.magician_faq .magician_faq_item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.magician_faq .magician_faq_q {
+  position: relative;
+  padding-right: 76px;
+  width: 100%;
+}
+
+.magician_faq .magician_faq_q:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: url('/content/dam/samsung/semiconductor/newsroom/event/open_innovation/icon-bold-navigation-close-up.svg') 0 0/100%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.magician_faq .magician_faq_q.active:after {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.magician_faq .magician_faq_q_tit {
+  font-family: 'Samsung Sharp Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.magician_faq .magician_faq_a {
+  padding-top: 20px;
+  padding-right: 76px;
+  font-family: 'Samsung One', sans-serif;
+  font-size: 1.8rem;
+  color: #333333;
+  display: none;
+}
+
+.magician_faq .magician_faq_a a {
+  color: #006ff2;
+  text-decoration: underline;
+}
+
+.magician_faq_a > p {
+  position: relative;
+}
+.pt-24 {
+  padding-top: 24px;
+}
+.magician_faq_a > p.list {
+  display: flex;
+}
+.magician_faq_a > p.list span:first-child {
+  min-width: 18px;
+}
+.magician_faq_a > p.list span:last-child {
+  flex: 1;
+}
+.magician_faq_a > p.list span.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #333;
+  top: 10px;
+  left: 3px;
+  position: relative;
+  min-width: inherit;
+}
+.magician_faq_a > p.list span.dot-right {
+  padding-left: 13px;
+}
+
+@media screen and (max-width: 1023px) {
+  .magician_faq .magician_faq_wrap {
+    padding: 80px 60px 80px;
+  }
+  .magician_faq .magician_faq_tit {
+    font-size: 2.8rem;
+    padding-bottom: 60px;
+  }
+  .magician_faq .magician_faq_item {
+    padding: 24px 0;
+  }
+  .magician_faq .magician_faq_q {
+    padding-right: 56px;
+  }
+  .magician_faq .magician_faq_q:after {
+    top: 2px;
+  }
+  .magician_faq .magician_faq_q_tit {
+    font-size: 2rem;
+  }
+  .magician_faq .magician_faq_a {
+    padding-top: 16px;
+    padding-right: 56px;
+    font-size: 1.5rem;
+  }
+  .pt-24 {
+    padding-top: 20px;
+  }
+  .magician_faq_a > p.list span:first-child {
+    min-width: 14px;
+  }
+  .magician_faq_a > p.list span.dot {
+    width: 4px;
+    height: 4px;
+    top: 8px;
+    left: 2px;
+    min-width: inherit;
+  }
+  .magician_faq_a > p.list span.dot-right {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .magician_faq .magician_faq_wrap {
+    padding: 60px 24px;
+  }
+  .magician_faq .magician_faq_tit {
+    font-size: 2.4rem;
+    padding-bottom: 40px;
+  }
+  .magician_faq .magician_faq_q {
+    padding-right: 48px;
+  }
+  .magician_faq .magician_faq_q:after {
+    top: 0;
+  }
+  .magician_faq .magician_faq_q_tit {
+    font-size: 1.6rem;
+  }
+  .magician_faq .magician_faq_a {
+    padding-top: 20px;
+    padding-right: 48px;
+    font-size: 1.5rem;
+  }
+}
+
+</style>
+
+<div class="magician_faq" id="faqs">
+      <div class="magician_faq_wrap">
+        <h2 class="magician_faq_tit highContrastTarget">FAQs</h2>
+
+        <ul class="magician_faq_list">
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="移动设备使用哪种处理器？">
+              <h3 class="magician_faq_q_tit highContrastTarget">移动设备使用哪种处理器？</h3>
+            </button>
+            <div class="magician_faq_a">
+              <p>移动处理器也称为应用处理器，用于支持智能手机、平板电脑等移动设备。与 PC 中所用处理器不同，移动处理器能效高，并且嵌入了多种重要的处理单元，例如中央处理器 (CPU)、图形处理器 (GPU)、网络处理器 (NPU)、图像信号处理器 (ISP)、调制解调器等。</p>
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="多少千兆赫 (GHz) 适合移动设备？">
+              <h3 class="magician_faq_q_tit highContrastTarget">多少千兆赫 (GHz) 适合移动设备？</h3>
+            </button>
+            <div class="magician_faq_a">
+             随着多任务处理成为智能手机的标配，时钟速度超过 2GHz 的多核 CPU 能够满足用户的大部分日常活动需求。对于资深游戏玩家来说，需要的时钟速度远远更高，建议接近 3GHz左右。
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="在移动设备中，是随机存取存储器 (RAM) 重要，还是处理器重要？">
+              <h3 class="magician_faq_q_tit highContrastTarget">在移动设备中，是随机存取存储器 (RAM) 重要，还是处理器重要？</h3>
+            </button>
+            <div class="magician_faq_a">
+              优质的 RAM 和处理器都有利于提高智能手机的总体性能。 有了更大的内存，智能手机能够在后台执行多任务或运行更多的应用如果配合强大的处理器，就可以更快地只想这些任务和应用。
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="移动设备的处理器能否更换？">
+              <h3 class="magician_faq_q_tit highContrastTarget">移动设备的处理器能否更换？</h3>
+            </button>
+            <div class="magician_faq_a">
+               不能。移动处理器通过球形触点阵列封装 (BGA) 的方式直接焊接在手机主板上。
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="八核与四核相比，哪种更快？">
+              <h3 class="magician_faq_q_tit highContrastTarget">八核与四核相比，哪种更快？</h3>
+            </button>
+            <div class="magician_faq_a">
+            一般而言，拥有更多内核的八核处理器比四核处理器更适合运行多个应用。当然，性能还取决于配置八核或四核时具体使用的 CPU 内核状态，例如内核的新旧和大小。
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="多少纳米的处理器更合适?">
+              <h3 class="magician_faq_q_tit highContrastTarget">多少纳米的处理器更合适?</h3>
+            </button>
+            <div class="magician_faq_a">
+                一般而言，工艺节点越先进，越有利于改进处理器的性能和能效。
+            </div>
+          </li>
+        
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="如何选择更合适的处理器？">
+              <h3 class="magician_faq_q_tit highContrastTarget">如何选择更合适的处理器？</h3>
+            </button>
+            <div class="magician_faq_a">
+              内核数量或 GHz 速度本身可能并不代表处理器的总体性能，但很适合从这些方面着手改进性能。然后还需要分析移动处理器的其他重要功能，例如 GPU、调制解调器、ISP 等。
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+    </div>

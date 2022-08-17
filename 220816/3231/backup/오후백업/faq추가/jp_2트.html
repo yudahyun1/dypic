@@ -1,0 +1,250 @@
+<style>
+/* Component Name */
+.magician_faq .magician_faq_wrap {
+  padding: 100px 60px 100px;
+  max-width: 802px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.magician_faq .magician_faq_tit {
+  font-family: 'Samsung Sharp Sans', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  padding-bottom: 80px;
+}
+
+.magician_faq .magician_faq_list {
+  max-width: 802px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.magician_faq .magician_faq_item {
+  position: relative;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.magician_faq .magician_faq_item:first-child {
+  padding-top: 0;
+}
+
+.magician_faq .magician_faq_item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.magician_faq .magician_faq_q {
+  position: relative;
+  padding-right: 76px;
+  width: 100%;
+}
+
+.magician_faq .magician_faq_q:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: url('/content/dam/samsung/semiconductor/newsroom/event/open_innovation/icon-bold-navigation-close-up.svg') 0 0/100%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.magician_faq .magician_faq_q.active:after {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.magician_faq .magician_faq_q_tit {
+  font-family: 'Samsung Sharp Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.magician_faq .magician_faq_a {
+  padding-top: 20px;
+  padding-right: 76px;
+  font-family: 'Samsung One', sans-serif;
+  font-size: 1.8rem;
+  color: #333333;
+  display: none;
+}
+
+.magician_faq .magician_faq_a a {
+  color: #006ff2;
+  text-decoration: underline;
+}
+
+.magician_faq_a > p {
+  position: relative;
+}
+.pt-24 {
+  padding-top: 24px;
+}
+.magician_faq_a > p.list {
+  display: flex;
+}
+.magician_faq_a > p.list span:first-child {
+  min-width: 18px;
+}
+.magician_faq_a > p.list span:last-child {
+  flex: 1;
+}
+.magician_faq_a > p.list span.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #333;
+  top: 10px;
+  left: 3px;
+  position: relative;
+  min-width: inherit;
+}
+.magician_faq_a > p.list span.dot-right {
+  padding-left: 13px;
+}
+
+@media screen and (max-width: 1023px) {
+  .magician_faq .magician_faq_wrap {
+    padding: 80px 60px 80px;
+  }
+  .magician_faq .magician_faq_tit {
+    font-size: 2.8rem;
+    padding-bottom: 60px;
+  }
+  .magician_faq .magician_faq_item {
+    padding: 24px 0;
+  }
+  .magician_faq .magician_faq_q {
+    padding-right: 56px;
+  }
+  .magician_faq .magician_faq_q:after {
+    top: 2px;
+  }
+  .magician_faq .magician_faq_q_tit {
+    font-size: 2rem;
+  }
+  .magician_faq .magician_faq_a {
+    padding-top: 16px;
+    padding-right: 56px;
+    font-size: 1.5rem;
+  }
+  .pt-24 {
+    padding-top: 20px;
+  }
+  .magician_faq_a > p.list span:first-child {
+    min-width: 14px;
+  }
+  .magician_faq_a > p.list span.dot {
+    width: 4px;
+    height: 4px;
+    top: 8px;
+    left: 2px;
+    min-width: inherit;
+  }
+  .magician_faq_a > p.list span.dot-right {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .magician_faq .magician_faq_wrap {
+    padding: 60px 24px;
+  }
+  .magician_faq .magician_faq_tit {
+    font-size: 2.4rem;
+    padding-bottom: 40px;
+  }
+  .magician_faq .magician_faq_q {
+    padding-right: 48px;
+  }
+  .magician_faq .magician_faq_q:after {
+    top: 0;
+  }
+  .magician_faq .magician_faq_q_tit {
+    font-size: 1.6rem;
+  }
+  .magician_faq .magician_faq_a {
+    padding-top: 20px;
+    padding-right: 48px;
+    font-size: 1.5rem;
+  }
+}
+
+</style>
+
+<div class="magician_faq" id="faqs">
+      <div class="magician_faq_wrap">
+        <h2 class="magician_faq_tit highContrastTarget">FAQs</h2>
+
+        <ul class="magician_faq_list">
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="モバイルデバイスにはどのプロセッサが使われていますか？">
+              <h3 class="magician_faq_q_tit highContrastTarget">モバイルデバイスにはどのプロセッサが使われていますか？</h3>
+            </button>
+            <div class="magician_faq_a">
+              <p>
+                モバイルプロセッサはアプリケーションプロセッサとも呼ばれ、スマートフォンやタブレットなどのモバイルデバイスの能力となります。PCに使用されるプロセッサとは異なり、モバイルプロセッサは高電力効率で、CPU、GPU、NPU、ISP、モデムなどのさまざまな主な処理装置が組み込まれています。
+              </p>
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="モバイルデバイスにはどのぐらいのGHzが適切ですか？">
+              <h3 class="magician_faq_q_tit highContrastTarget">モバイルデバイスにはどのぐらいのGHzが適切ですか？</h3>
+            </button>
+            <div class="magician_faq_a">
+            スマートフォンではマルチタスキングが標準になっているので、日常的なご使用ではクロックスピードが2GHz以上のマルチコアCPUで十分です。ハードコアゲーマーには、約3GHzの高いクロックスピードを推奨します。
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="モバイルデバイスではRAMとプロセッサのどちらが重要ですか？">
+              <h3 class="magician_faq_q_tit highContrastTarget">モバイルデバイスではRAMとプロセッサのどちらが重要ですか？</h3>
+            </button>
+            <div class="magician_faq_a">
+           RAMとプロセッサがスマートフォン全体のパフォーマンスを向上さます。RAMを増やすとスマートフォンはマルチタスクを実行したりバックグラウンドで実行するアプリ増やしたりすることができ、高速プロセッサではこれらのタスクとアプリの実行速度が速くなります。
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="モバイルデバイスのプロセッサは取り換えができますか？">
+              <h3 class="magician_faq_q_tit highContrastTarget">モバイルデバイスのプロセッサは取り換えができますか？</h3>
+            </button>
+            <div class="magician_faq_a">
+             いいえ。モバイルプロセッサはスマートフォンのマザーボードにボールグリッドアレイ(BGA)ではんだ付けされます。
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="オクタコアとクアッドコアではどちらが速いですか？">
+              <h3 class="magician_faq_q_tit highContrastTarget">オクタコアとクアッドコアではどちらが速いですか？</h3>
+            </button>
+            <div class="magician_faq_a">
+          一般的に、クアッドコアにくらべて利用可能なコアが多いオクタコアは、クアッドコアよりも複数のアプリの実行に優れます。ただし、パフォーマンスは、最新と旧式、大型と小型など、どのようなCPUコアが8または4コアを構成するので使用方法にも依存します。
+            </div>
+          </li>
+           <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="何ナノのプロセッサがベストですか？">
+              <h3 class="magician_faq_q_tit highContrastTarget">何ナノのプロセッサがベストですか？</h3>
+            </button>
+            <div class="magician_faq_a">
+         一般的に、プロセスノードを先進的にするとプロセッサの性能と電力効率が向上します。
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="優れたプロセッサを選ぶ方法はありますか？">
+              <h3 class="magician_faq_q_tit highContrastTarget">優れたプロセッサを選ぶ方法はありますか？</h3>
+            </button>
+            <div class="magician_faq_a">
+               コアの数またはGHz速度だけではプロセッサの全体の性能を表せないことがありますが、まずはそこから考えます。その後、GPU、モデム、ISPなどのモバイルプロセッサの他の主な機能を検討できます。
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>

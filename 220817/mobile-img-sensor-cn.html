@@ -1,0 +1,224 @@
+<style>
+      /* Component Name */
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_wrap {
+        padding: 100px 60px 100px;
+        max-width: 802px;
+        margin: 0 auto;
+        text-align: center;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_tit {
+        font-family: 'Samsung Sharp Sans', sans-serif;
+        font-size: 3.6rem;
+        font-weight: 700;
+        padding-bottom: 80px;
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_list {
+        max-width: 802px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_item {
+        position: relative;
+        padding: 32px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_item:first-child {
+        padding-top: 0;
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_q {
+        position: relative;
+        padding-right: 76px;
+        width: 100%;
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_q:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 3px;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        background: url('/content/dam/samsung/semiconductor/newsroom/event/open_innovation/icon-bold-navigation-close-up.svg') 0 0/100%;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_q.active:after {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_q_tit {
+        font-family: 'Samsung Sharp Sans', sans-serif;
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_a {
+        padding-top: 20px;
+        padding-right: 76px;
+        font-family: 'Samsung One', sans-serif;
+        font-size: 1.8rem;
+        color: #333333;
+        display: none;
+      }
+
+      .mobile_image_sensor_faq .mobile_image_sensor_faq_a a {
+        color: #006ff2;
+        text-decoration: underline;
+      }
+
+      .mobile_image_sensor_faq_a > p {
+        position: relative;
+      }
+      .pt-24 {
+        padding-top: 24px;
+      }
+      .mobile_image_sensor_faq_a > p.list {
+        display: flex;
+      }
+      .mobile_image_sensor_faq_a > p.list span:first-child {
+        min-width: 18px;
+      }
+      .mobile_image_sensor_faq_a > p.list span:last-child {
+        flex: 1;
+      }
+      .mobile_image_sensor_faq_a > p.list span.dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background: #333;
+        top: 10px;
+        left: 3px;
+        position: relative;
+        min-width: inherit;
+      }
+      .mobile_image_sensor_faq_a > p.list span.dot-right {
+        padding-left: 13px;
+      }
+
+      @media screen and (max-width: 1023px) {
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_wrap {
+          padding: 80px 60px 80px;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_tit {
+          font-size: 2.8rem;
+          padding-bottom: 60px;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_item {
+          padding: 24px 0;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_q {
+          padding-right: 56px;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_q:after {
+          top: 2px;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_q_tit {
+          font-size: 2rem;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_a {
+          padding-top: 16px;
+          padding-right: 56px;
+          font-size: 1.5rem;
+        }
+        .pt-24 {
+          padding-top: 20px;
+        }
+        .mobile_image_sensor_faq_a > p.list span:first-child {
+          min-width: 14px;
+        }
+        .mobile_image_sensor_faq_a > p.list span.dot {
+          width: 4px;
+          height: 4px;
+          top: 8px;
+          left: 2px;
+          min-width: inherit;
+        }
+        .mobile_image_sensor_faq_a > p.list span.dot-right {
+          padding-left: 10px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_wrap {
+          padding: 60px 24px;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_tit {
+          font-size: 2.4rem;
+          padding-bottom: 40px;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_q {
+          padding-right: 48px;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_q:after {
+          top: 0;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_q_tit {
+          font-size: 1.6rem;
+        }
+        .mobile_image_sensor_faq .mobile_image_sensor_faq_a {
+          padding-top: 20px;
+          padding-right: 48px;
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+
+<div class="mobile_image_sensor_faq" id="faqs">
+      <div class="mobile_image_sensor_faq_wrap">
+        <h2 class="mobile_image_sensor_faq_tit highContrastTarget">FAQs</h2>
+
+        <ul class="mobile_image_sensor_faq_list">
+          <li class="mobile_image_sensor_faq_item">
+            <button type="button" class="mobile_image_sensor_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="什么是手机图像传感器？">
+              <h3 class="mobile_image_sensor_faq_q_tit highContrastTarget">什么是手机图像传感器？</h3>
+            </button>
+            <div class="mobile_image_sensor_faq_a">
+              图像传感器位于智能手机的相机模组中。在照相时，图像传感器会捕获通过相机镜头进入的光信号，然后生成数字图像。
+            </div>
+          </li>
+          <li class="mobile_image_sensor_faq_item">
+            <button type="button" class="mobile_image_sensor_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="什么是手机 CCD？">
+              <h3 class="mobile_image_sensor_faq_q_tit highContrastTarget">什么是手机 CCD？</h3>
+            </button>
+            <div class="mobile_image_sensor_faq_a">
+              图像传感器使用 CCD（电荷耦合器件）和 CMOS（互补金属氧化物半导体）这两种技术将光转换为电信号。尽管 CCD 传感器具有更好的质量和更小的噪音，但 CMOS 传感器通常具有更快的速度、更高的动态范围，且需要的功耗更少。由于这些原因，CMOS 传感器主要用于智能手机、平板电脑等移动应用。
+
+            </div>
+          </li>
+          <li class="mobile_image_sensor_faq_item">
+            <button type="button" class="mobile_image_sensor_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="图像传感器有什么作用？">
+              <h3 class="mobile_image_sensor_faq_q_tit highContrastTarget">图像传感器有什么作用？</h3>
+            </button>
+            <div class="mobile_image_sensor_faq_a">
+              图像传感器将光信息（模拟信号）转换为数字信号，从而生成数码照片。它具有 500 万到 2 亿的像素，能够抓拍多彩细腻的珍贵瞬间。
+            </div>
+          </li>
+          <li class="mobile_image_sensor_faq_item">
+            <button type="button" class="mobile_image_sensor_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="哪种图像传感器适合移动设备相机？">
+              <h3 class="mobile_image_sensor_faq_q_tit highContrastTarget">哪种图像传感器适合移动设备相机？</h3>
+            </button>
+            <div class="mobile_image_sensor_faq_a">
+              智能手机中常用的图像传感器分为两类：一是大像素图像传感器，二是小像素图像传感器。大像素具有高感光性和低噪点，而小像素能够在手机中实现超高分辨率，呈现更多生动细节。
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>

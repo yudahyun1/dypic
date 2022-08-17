@@ -1,0 +1,251 @@
+<style>
+/* Component Name */
+.magician_faq .magician_faq_wrap {
+  padding: 100px 60px 100px;
+  max-width: 802px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.magician_faq .magician_faq_tit {
+  font-family: 'Samsung Sharp Sans', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  padding-bottom: 80px;
+}
+
+.magician_faq .magician_faq_list {
+  max-width: 802px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.magician_faq .magician_faq_item {
+  position: relative;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.magician_faq .magician_faq_item:first-child {
+  padding-top: 0;
+}
+
+.magician_faq .magician_faq_item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.magician_faq .magician_faq_q {
+  position: relative;
+  padding-right: 76px;
+  width: 100%;
+}
+
+.magician_faq .magician_faq_q:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: url('/content/dam/samsung/semiconductor/newsroom/event/open_innovation/icon-bold-navigation-close-up.svg') 0 0/100%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.magician_faq .magician_faq_q.active:after {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.magician_faq .magician_faq_q_tit {
+  font-family: 'Samsung Sharp Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.magician_faq .magician_faq_a {
+  padding-top: 20px;
+  padding-right: 76px;
+  font-family: 'Samsung One', sans-serif;
+  font-size: 1.8rem;
+  color: #333333;
+  display: none;
+}
+
+.magician_faq .magician_faq_a a {
+  color: #006ff2;
+  text-decoration: underline;
+}
+
+.magician_faq_a > p {
+  position: relative;
+}
+.pt-24 {
+  padding-top: 24px;
+}
+.magician_faq_a > p.list {
+  display: flex;
+}
+.magician_faq_a > p.list span:first-child {
+  min-width: 18px;
+}
+.magician_faq_a > p.list span:last-child {
+  flex: 1;
+}
+.magician_faq_a > p.list span.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #333;
+  top: 10px;
+  left: 3px;
+  position: relative;
+  min-width: inherit;
+}
+.magician_faq_a > p.list span.dot-right {
+  padding-left: 13px;
+}
+
+@media screen and (max-width: 1023px) {
+  .magician_faq .magician_faq_wrap {
+    padding: 80px 60px 80px;
+  }
+  .magician_faq .magician_faq_tit {
+    font-size: 2.8rem;
+    padding-bottom: 60px;
+  }
+  .magician_faq .magician_faq_item {
+    padding: 24px 0;
+  }
+  .magician_faq .magician_faq_q {
+    padding-right: 56px;
+  }
+  .magician_faq .magician_faq_q:after {
+    top: 2px;
+  }
+  .magician_faq .magician_faq_q_tit {
+    font-size: 2rem;
+  }
+  .magician_faq .magician_faq_a {
+    padding-top: 16px;
+    padding-right: 56px;
+    font-size: 1.5rem;
+  }
+  .pt-24 {
+    padding-top: 20px;
+  }
+  .magician_faq_a > p.list span:first-child {
+    min-width: 14px;
+  }
+  .magician_faq_a > p.list span.dot {
+    width: 4px;
+    height: 4px;
+    top: 8px;
+    left: 2px;
+    min-width: inherit;
+  }
+  .magician_faq_a > p.list span.dot-right {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .magician_faq .magician_faq_wrap {
+    padding: 60px 24px;
+  }
+  .magician_faq .magician_faq_tit {
+    font-size: 2.4rem;
+    padding-bottom: 40px;
+  }
+  .magician_faq .magician_faq_q {
+    padding-right: 48px;
+  }
+  .magician_faq .magician_faq_q:after {
+    top: 0;
+  }
+  .magician_faq .magician_faq_q_tit {
+    font-size: 1.6rem;
+  }
+  .magician_faq .magician_faq_a {
+    padding-top: 20px;
+    padding-right: 48px;
+    font-size: 1.5rem;
+  }
+}
+
+</style>
+
+<div class="magician_faq" id="faqs">
+      <div class="magician_faq_wrap">
+        <h2 class="magician_faq_tit highContrastTarget">FAQs</h2>
+
+        <ul class="magician_faq_list">
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="Which processor is used for mobile?">
+              <h3 class="magician_faq_q_tit highContrastTarget">Which processor is used for mobile?</h3>
+            </button>
+            <div class="magician_faq_a">
+              <p>A mobile processor, also called application processor, powers mobile devices like smartphone, tablets, etc. Unlike the processor used in PCs, mobile processor is highly power efficient and embeds various key processing units such as CPU, GPU, NPU, ISP, Modem, etc. </p>
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="How much GHz is good for mobile?">
+              <h3 class="magician_faq_q_tit highContrastTarget">How much GHz is good for mobile?</h3>
+            </button>
+            <div class="magician_faq_a">
+             As multitasking on a smartphone has become a norm, multi-core CPU with clock speed of over 2GHz would suffice most of user's daily activities. For hardcore gamers, much higher clock speed nearing around ~3GHz would be recommended. 
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="What is important RAM or processor in mobile?">
+              <h3 class="magician_faq_q_tit highContrastTarget">What is important RAM or processor in mobile?</h3>
+            </button>
+            <div class="magician_faq_a">
+              RAM and processor both help improve smartphone's overall performance. With more RAM, smartphone is able to perform multi-tasks or run more apps in the background and with powerful processor those tasks and apps are performed faster. 
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="Can we change processor of mobile?">
+              <h3 class="magician_faq_q_tit highContrastTarget">Can we change processor of mobile?</h3>
+            </button>
+            <div class="magician_faq_a">
+               No. Mobile processor is soldered on to the phone's motherboard with a ball-grid array(BGA). 
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="Which is faster octa-core or quad-core?">
+              <h3 class="magician_faq_q_tit highContrastTarget">Which is faster octa-core or quad-core?</h3>
+            </button>
+            <div class="magician_faq_a">
+            In general, octa-core, with more cores available, would be better at running multiple apps than quad-core configuration.  However, performace will also depend on which CPU cores, such as newest or legacy, big or little, are used to configure eight or four cores.
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="Which nm processor is best?">
+              <h3 class="magician_faq_q_tit highContrastTarget">Which nm processor is best?</h3>
+            </button>
+            <div class="magician_faq_a">
+              In general, more advanced process node helps in improving the processor's performance and power efficiency. For instance, when compared to 7nm, 5nm process will offer 20* percent lower power consumption or 10 percent higher performance. However, as both premium and low-end mobile processor can be built on 5nm, process node by itself does not represent overall performance.<br/><br/>  
+                (*source: Samsung Foundry news<br/><a href="https://semiconductor.samsung.com/us/newsroom/news/samsung-successfully-completes-5nm-euv-development-to-allow-greater-area-scaling-and-ultra-low-power-benefits/">
+                  https://semiconductor.samsung.com/us/newsroom/news/samsung-successfully-completes-5nm-euv-development-to-allow-greater-area-scaling-and-ultra-low-power-benefits/)
+                </a>
+            </div>
+          </li>
+        
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="How do I choose a better processor?">
+              <h3 class="magician_faq_q_tit highContrastTarget">How do I choose a better processor?</h3>
+            </button>
+            <div class="magician_faq_a">A number of cores or GHz speed alone may not represent overall performance of the processor but it’s a good place to start. After that, you can look into other key features of the mobile processor such as GPU, Modem, ISP, etc.</div>
+          </li>
+          
+        </ul>
+      </div>
+    </div>

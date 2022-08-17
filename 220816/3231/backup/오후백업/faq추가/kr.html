@@ -1,0 +1,248 @@
+<style>
+/* Component Name */
+.magician_faq .magician_faq_wrap {
+  padding: 100px 60px 100px;
+  max-width: 802px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.magician_faq .magician_faq_tit {
+  font-family: 'Samsung Sharp Sans', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  padding-bottom: 80px;
+}
+
+.magician_faq .magician_faq_list {
+  max-width: 802px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.magician_faq .magician_faq_item {
+  position: relative;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.magician_faq .magician_faq_item:first-child {
+  padding-top: 0;
+}
+
+.magician_faq .magician_faq_item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.magician_faq .magician_faq_q {
+  position: relative;
+  padding-right: 76px;
+  width: 100%;
+}
+
+.magician_faq .magician_faq_q:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: url('/content/dam/samsung/semiconductor/newsroom/event/open_innovation/icon-bold-navigation-close-up.svg') 0 0/100%;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.magician_faq .magician_faq_q.active:after {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.magician_faq .magician_faq_q_tit {
+  font-family: 'Samsung Sharp Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.magician_faq .magician_faq_a {
+  padding-top: 20px;
+  padding-right: 76px;
+  font-family: 'Samsung One', sans-serif;
+  font-size: 1.8rem;
+  color: #333333;
+  display: none;
+}
+
+.magician_faq .magician_faq_a a {
+  color: #006ff2;
+  text-decoration: underline;
+}
+
+.magician_faq_a > p {
+  position: relative;
+}
+.pt-24 {
+  padding-top: 24px;
+}
+.magician_faq_a > p.list {
+  display: flex;
+}
+.magician_faq_a > p.list span:first-child {
+  min-width: 18px;
+}
+.magician_faq_a > p.list span:last-child {
+  flex: 1;
+}
+.magician_faq_a > p.list span.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #333;
+  top: 10px;
+  left: 3px;
+  position: relative;
+  min-width: inherit;
+}
+.magician_faq_a > p.list span.dot-right {
+  padding-left: 13px;
+}
+
+@media screen and (max-width: 1023px) {
+  .magician_faq .magician_faq_wrap {
+    padding: 80px 60px 80px;
+  }
+  .magician_faq .magician_faq_tit {
+    font-size: 2.8rem;
+    padding-bottom: 60px;
+  }
+  .magician_faq .magician_faq_item {
+    padding: 24px 0;
+  }
+  .magician_faq .magician_faq_q {
+    padding-right: 56px;
+  }
+  .magician_faq .magician_faq_q:after {
+    top: 2px;
+  }
+  .magician_faq .magician_faq_q_tit {
+    font-size: 2rem;
+  }
+  .magician_faq .magician_faq_a {
+    padding-top: 16px;
+    padding-right: 56px;
+    font-size: 1.5rem;
+  }
+  .pt-24 {
+    padding-top: 20px;
+  }
+  .magician_faq_a > p.list span:first-child {
+    min-width: 14px;
+  }
+  .magician_faq_a > p.list span.dot {
+    width: 4px;
+    height: 4px;
+    top: 8px;
+    left: 2px;
+    min-width: inherit;
+  }
+  .magician_faq_a > p.list span.dot-right {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .magician_faq .magician_faq_wrap {
+    padding: 60px 24px;
+  }
+  .magician_faq .magician_faq_tit {
+    font-size: 2.4rem;
+    padding-bottom: 40px;
+  }
+  .magician_faq .magician_faq_q {
+    padding-right: 48px;
+  }
+  .magician_faq .magician_faq_q:after {
+    top: 0;
+  }
+  .magician_faq .magician_faq_q_tit {
+    font-size: 1.6rem;
+  }
+  .magician_faq .magician_faq_a {
+    padding-top: 20px;
+    padding-right: 48px;
+    font-size: 1.5rem;
+  }
+}
+
+</style>
+
+<div class="magician_faq" id="faqs">
+      <div class="magician_faq_wrap">
+        <h2 class="magician_faq_tit highContrastTarget">FAQs</h2>
+
+        <ul class="magician_faq_list">
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="어떤 프로세서가 모바일 기기에 사용되나요?">
+              <h3 class="magician_faq_q_tit highContrastTarget">어떤 프로세서가 모바일 기기에 사용되나요?</h3>
+            </button>
+            <div class="magician_faq_a">
+              <p>애플리케이션 프로세서라고도 하는 모바일 프로세서는 스마트폰과 태블릿과 같은 모바일 기기에 전원을 공급합니다. 모바일 프로세서는 PC에 사용되는 프로세서와 달리 전력 효율이 높으며 CPU, GPU, NPU, ISP, 모뎀 등과 같은 다양한 주요 프로세싱 유닛을 내장하고 있습니다.</p>
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="몇 GHz가 모바일 기기에 좋은가요?">
+              <h3 class="magician_faq_q_tit highContrastTarget">몇 GHz가 모바일 기기에 좋은가요?</h3>
+            </button>
+            <div class="magician_faq_a">
+            스마트폰에서의 멀티태스킹이 보편화되면서 사용자 대부분의 일상 활동에는 클럭 속도 2GHz 이상의 멀티코어 CPU면 충분할 것입니다. 하드코어 게이머의 경우에는 3GHz에 가까운 훨씬 높은 클럭 속도를 권장합니다.
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="모바일 기기에서 중요한 RAM 또는 프로세서가 무엇인가요?">
+              <h3 class="magician_faq_q_tit highContrastTarget">모바일 기기에서 중요한 RAM 또는 프로세서가 무엇인가요?</h3>
+            </button>
+            <div class="magician_faq_a">
+           RAM과 프로세서는 모두 스마트폰의 전반적인 성능을 향상시킵니다. 스마트폰은 RAM 용량이 많을수록 멀티태스킹을 수행하거나 백 그라운드에서 더 많은 앱을 실행할 수 있으며, 강력한 프로세서가 있으면 이러한 작업과 앱을 더 빠르게 실행할 수 있습니다.
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="모바일 프로세서를 변경할 수 있나요?">
+              <h3 class="magician_faq_q_tit highContrastTarget">모바일 프로세서를 변경할 수 있나요?</h3>
+            </button>
+            <div class="magician_faq_a">
+              아니요. 모바일 프로세서는 스마트폰의 마더보드에 볼 그리드 배열(BGA) 방식으로 납땜되어 있습니다.
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="옥타코어와 쿼드코어 중 어느 것이 더 빠른가요?">
+              <h3 class="magician_faq_q_tit highContrastTarget">옥타코어와 쿼드코어 중 어느 것이 더 빠른가요?</h3>
+            </button>
+            <div class="magician_faq_a">
+          일반적으로, 더 많은 코어를 사용할 수 있는 옥타코어는 쿼드코어 구성보다 여러 개의 앱을 실행하기 좋습니다. 그러나 성능은 옥타코어 또는 쿼드코어 구성에 사용되는 CPU 코어가 최신 또는 기존의 것인지, 또는 그 크기 등에 따라 다를 수 있습니다.
+            </div>
+          </li>
+           <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="어떤 나노 프로세서가 가장 좋은가요?">
+              <h3 class="magician_faq_q_tit highContrastTarget">어떤 나노 프로세서가 가장 좋은가요?</h3>
+            </button>
+            <div class="magician_faq_a">
+        일반적으로 첨단 프로세스 노드일수록 프로세서의 성능과 전력 효율을 향상시키는 데 도움이 됩니다.
+            </div>
+          </li>
+          <li class="magician_faq_item">
+            <button type="button" class="magician_faq_q" title="Expand Anchor Menu" data-an-tr="body contents" data-an-ca="content click" data-an-ac="faq" data-an-la="더 나은 프로세서를 선택하는 방법이 있나요?">
+              <h3 class="magician_faq_q_tit highContrastTarget">더 나은 프로세서를 선택하는 방법이 있나요?</h3>
+            </button>
+            <div class="magician_faq_a">
+               코어 수나 GHz 속도만으로는 프로세서의 전체 성능을 나타낼 수 없지만, 이를 바탕으로 GPU, 모뎀, ISP 등과 같은 모바일 프로세서의 다른 주요 기능을 살펴볼 수 있습니다.
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
