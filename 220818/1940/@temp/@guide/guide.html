@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>가이드 : 삼성전자 반도체</title>
+    <!-- meta -->
+    <meta charset="utf-8" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../../../../../../designs/global/common/css/base.css" />
+    <link rel="stylesheet" href="../../../../../../../designs/global/common/css/common.css" />
+    <link rel="stylesheet" href="../../css/AR01_article-search-bar.css" />
+    <!-- //css -->
+
+    <script src="../../../../../../../designs/global/common/js/plugins/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+
+    <script src="../../js/AR01_article-search-bar.js"></script>
+    <!-- //resources -->
+    <style>
+      .top-info dl {
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .top-info dl dt {
+        flex: 1 1 100%;
+        height: 79px;
+        line-height: 79px;
+        padding: 0 42px;
+        background: #efefef;
+        background-color: #dadada;
+        font-weight: 700;
+      }
+
+      .top-info dl dt + dd {
+        padding-left: 42px;
+      }
+      .top-info dl dd {
+        line-height: 46px;
+        height: 46px;
+        font-size: 12px;
+      }
+
+      .top-info dl * {
+        margin-right: 10px;
+        flex: 0 0 auto;
+      }
+
+      .guide-header {
+        background-color: #fff;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+      }
+
+      .guide-header h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 49px;
+        font-size: 40px;
+        line-height: 1.4;
+        text-transform: capitalize;
+        background: #000;
+        color: #fff;
+        min-height: 260px;
+      }
+
+      .guide-header h1 > span {
+        font-size: 26px;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .guide-header h1 > span + p {
+        font-size: 44px;
+        font-weight: 700;
+        margin-bottom: 40px;
+      }
+
+      .window_width {
+        font-size: 18px;
+      }
+
+      .guide-body {
+        display: flex;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: #fff;
+        padding-left: 250px;
+      }
+
+      .guide-info {
+        flex: 0 0 250px;
+        margin-bottom: 100px;
+        width: 250px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow-y: auto;
+        height: 100vh;
+      }
+
+      .guide-info h2 {
+        font-size: 24px;
+        font-weight: 700;
+        padding: 24px 16px;
+        color: #053c72;
+      }
+
+      .guide-info dl {
+        font-size: 14px;
+
+        transition: all 0.4s;
+      }
+
+      /* .guide-info dl:hover {
+        background-color: rgba(255, 0, 0, 0.6);
+        color: #fff; 
+      } */
+
+      .guide-info dl dt {
+        font-weight: 700;
+        padding: 16px;
+        font-size: 15px;
+        line-height: 24px;
+      }
+      .guide-info dl dt:hover {
+        background: #0077c8;
+      }
+
+      .guide-info dl:first-of-type dt {
+        background: #053c72;
+        color: #fff;
+      }
+
+      .guide-info dl dd:empty {
+        display: none;
+      }
+
+      .guide-info dl dd[onclick] {
+        cursor: pointer;
+      }
+      .guide-info dl dd {
+        padding: 0 16px;
+        line-height: 42px;
+        color: #767676;
+        font-size: 13px;
+      }
+
+      .guide-info dl dd:before {
+        content: '-';
+      }
+
+      .guide-info dl dd.active {
+        font-weight: 700;
+        text-decoration: underline;
+        opacity: 1;
+      }
+
+      .guide-info dl dd button {
+        border: 1px solid #000;
+        padding: 0 10px;
+        margin-left: 20px;
+      }
+
+      .code_here {
+        position: relative;
+        padding-top: 50px;
+        flex: 1 1 auto;
+        overflow-y: auto;
+
+        max-width: 1440px;
+        margin: 0 auto;
+        min-height: 100vh;
+        overscroll-behavior: contain;
+      }
+
+      .code_here * {
+        outline-offset: -1px;
+        transition: 0.1s;
+      }
+
+      .code_here > p:first-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 20px;
+        padding-right: 20px;
+        width: 100%;
+        text-align: right;
+        z-index: 10;
+        background: #fff;
+      }
+    </style>
+    <script>
+      $(function () {
+        var target = '';
+        var isTablet = window.innerWidth >= 768 && window.innerWidth <= 1023;
+        var isMobile = window.innerWidth > 0 && window.innerWidth <= 767;
+
+        function resize() {
+          var isTablet = window.innerWidth >= 768 && window.innerWidth <= 1023;
+          var isMobile = window.innerWidth > 0 && window.innerWidth <= 767;
+          var code_width = $('.code_here').width();
+          $('.window_width').text(
+            `창 크기: 전체:${window.innerWidth}px (${isTablet && !isMobile ? '태블릿' : !isTablet && isMobile ? '모바일' : 'PC'}) / 코드영역: ${code_width}px`
+          );
+
+          window.onscroll = function () {
+            var winTop = $(window).scrollTop();
+            var top_height = $('.top-info').height();
+            var guide_header_height = $('.guide-header').height();
+            var top_area = top_height + guide_header_height;
+
+            if (winTop >= top_area) {
+              $('.guide-info').css({ position: 'fixed' });
+            } else {
+              $('.guide-info').css({ position: 'absolute' });
+            }
+          };
+        }
+        resize();
+        $(window).resize(function () {
+          resize();
+        });
+
+        $('.guide-info > dl').mouseenter(function () {
+          var target = $(this).attr('data-class');
+
+          $(`.${target}`).css({ outline: '1px solid #0077c8' });
+        });
+        $('.guide-info > dl').mouseleave(function () {
+          var target = $(this).attr('data-class');
+
+          $(`.${target}`).css({ outline: 'none' });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="top-info">
+      <dl>
+        <dt>삼성 반응형 정보</dt>
+        <dd>데스크탑: 1024 ~ 1920</dd>
+        <dd>태블릿: 768 ~ 1023</dd>
+        <dd>모바일: 320 ~ 767</dd>
+      </dl>
+    </div>
+    <section class="guide-wrap">
+      <div class="guide-header">
+        <h1>
+          <span>컴포넌트 가이드</span>
+          <p>AR01_article search bar</p>
+          <p class="window_width"></p>
+        </h1>
+      </div>
+      <div class="guide-body">
+        <div class="guide-info">
+          <h2>기본정보</h2>
+          <dl data-class="AR01_article-search-bar">
+            <dt>컴포넌트 전체 / AR01_article-search-bar</dt>
+            <dd></dd>
+          </dl>
+          <dl data-class="AR01_article-search-bar-title">
+            <dt>타이틀 / AR01_article-search-bar-title(클래스명)</dt>
+            <dd></dd>
+          </dl>
+          <dl data-class="AR01_article-search-bar-form">
+            <dt>검색영역 / AR01_article-search-bar-form</dt>
+            <dd></dd>
+          </dl>
+          <dl data-class="AR01_article-search-bar-recommend-chips">
+            <dt>검색영역 - 칩 노출영역 / AR01_article-search-bar-recommend-chips</dt>
+            <dd>클릭 시 input에 선택한 value 삽입</dd>
+          </dl>
+        </div>
+        <div class="code_here">
+          <section class="AR01_article-search-bar">
+            <h1 class="AR01_article-search-bar-title">
+              <label for="inp_search">Looking for something else?</label>
+            </h1>
+            <form class="AR01_article-search-bar-form">
+              <div class="fieldset">
+                <div class="AR01_article-search-bar-inputbox-wrap">
+                  <input class="AR01_article-search-bar-inputbox" id="inp_search" type="search" placeholder="Search News" autocomplete="off" />
+                  <button
+                    type="button"
+                    class="btn-input-clear"
+                    aria-label="clear input field"
+                    data-an-tr="ar01_article search bar"
+                    data-an-ca="content click"
+                    data-an-ac="remove icon"
+                    data-an-la="none"
+                  ></button>
+                  <button
+                    type="button"
+                    class="btn-newsSubmitSearch"
+                    aria-label="submit"
+                    data-an-tr="ar01_article search bar"
+                    data-an-ca="content click"
+                    data-an-ac="search icon"
+                    data-an-la="none"
+                  ></button>
+                </div>
+                <div class="AR01_article-search-bar-recommend-chips">
+                  <a
+                    href="#none"
+                    class="chip-btn light-bg btn-large"
+                    data-an-tr="ar01_article search bar"
+                    data-an-ca="link click"
+                    data-an-ac="chips"
+                    data-an-la="{var-eng-chips name}"
+                    >GreenChip</a
+                  >
+                  <a
+                    href="#none"
+                    class="chip-btn light-bg btn-large"
+                    data-an-tr="ar01_article search bar"
+                    data-an-ca="link click"
+                    data-an-ac="chips"
+                    data-an-la="{var-eng-chips name}"
+                    >BlueChip</a
+                  >
+                  <a
+                    href="#none"
+                    class="chip-btn light-bg btn-large"
+                    data-an-tr="ar01_article search bar"
+                    data-an-ca="link click"
+                    data-an-ac="chips"
+                    data-an-la="{var-eng-chips name}"
+                    >K-Semiconductor</a
+                  >
+                  <a
+                    href="#none"
+                    class="chip-btn light-bg btn-large"
+                    data-an-tr="ar01_article search bar"
+                    data-an-ca="link click"
+                    data-an-ac="chips"
+                    data-an-la="{var-eng-chips name}"
+                    >MultichipPackage</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

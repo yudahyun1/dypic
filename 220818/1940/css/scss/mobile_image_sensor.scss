@@ -1,0 +1,15 @@
+// 공통 SCSS 호출(only Components)
+@import '../../../../designs/global/common/scss/common.scss';
+
+/* Component Name */
+$component-name: 'mobile_image_sensor';
+
+// Media Queries
+// PC
+@import '_global';
+
+// tablet
+@import '_tablet';
+
+// mobile
+@import '_mobile';
