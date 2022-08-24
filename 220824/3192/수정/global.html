@@ -131,6 +131,10 @@
     overflow: hidden;
   }
 
+  .home-newly-launched .home-newly_section1__feature figure {
+    position: relative;
+  }
+
   .home-newly-launched .home-newly_section1__feature_subtitle {
     width: 100%;
     text-align: center;
@@ -154,7 +158,7 @@
   }
 
   .home-newly-launched .home-newly_section1_playbtn {
-    height: calc(100% - 115px);
+    height: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -235,6 +239,7 @@
 
     .home-newly-launched .home-newly_section1__feature {
       border-radius: 25px;
+      position: relative;
     }
 
     .home-newly-launched .home-newly_section1__feature_subtitle {
@@ -348,6 +353,11 @@
       border-radius: 25px;
     }
 
+    .home-newly-launched .home-newly_section1__feature figure {
+      /* border-radius: 25px; */
+      position: relative;
+    }
+
     .home-newly-launched .home-newly_section1__feature_subtitle {
       padding: 20px 24px 16px;
       font-size: 2rem;
@@ -360,7 +370,7 @@
 
     .home-newly-launched .home-newly_section1_playbtn {
       border-radius: 25px;
-      height: calc(100% - 91px);
+      /* height: calc(100% - 91px); */
     }
 
     .home-newly-launched .home-newly_section1_playbtn:after {
@@ -416,7 +426,7 @@
 
     .home-newly-launched .home-newly_section1_playbtn {
       border-radius: 20px;
-      height: calc(100% - 71px);
+      /* height: calc(100% - 71px); */
     }
 
     .home-newly-launched .home-newly_section1_swiper_pagination {
@@ -478,14 +488,15 @@
                   <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_tab_3.png" />
                   <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_m_3.png" />
                   <img src="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_pc_3.png" alt="You can be a champion with 990 PRO SSD." />
+                  <!-- 동영상 일때 button -->
+                  <button class="home-newly_section1_playbtn highContrastTarget btnPlayVideoOpen" type="button" data-video-mobile-src="H8zAh3JVY5w" data-video-src="H8zAh3JVY5w" title="new window open" data-an-tr="body contents" data-an-ca="content clik" data-an-ac="play icon" data-an-la="H8zAh3JVY5w"></button>
                 </picture>
                 <figcaption>A champion maker - Winner takes all
                   Gaming SSD 990 PRO | 990 PRO with Heatsink</figcaption>
               </figure>
               <p class="home-newly_section1__feature_subtitle highContrastTarget">A champion maker - <br class="pc_only" />Winner takes all
                 Gaming SSD<br class="pc_only" /> 990 PRO | 990 PRO with Heatsink</p>
-              <!-- 동영상 일때 button -->
-              <button class="home-newly_section1_playbtn highContrastTarget btnPlayVideoOpen" type="button" data-video-mobile-src="H8zAh3JVY5w" data-video-src="H8zAh3JVY5w" title="new window open" data-an-tr="body contents" data-an-ca="content clik" data-an-ac="play icon" data-an-la="H8zAh3JVY5w"></button>
+
               <!-- //동영상 일때 button -->
             </div>
           </li>

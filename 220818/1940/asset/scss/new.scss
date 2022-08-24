@@ -327,7 +327,7 @@
 
 
 // PC ~ tablet 전
-@media screen and (max-width: 1220px) and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1220px) {
   .page-experience {
 
     .sec_featured.look-up-wrap {
@@ -378,6 +378,11 @@
         margin: 6rem auto 0;
       }
     }
+
+    .last-section {
+      border: 1px solid red;
+      gap: 24px;
+    }
   }
 
 
@@ -411,9 +416,13 @@
         // margin: 0 auto;
 
         figure {
+          min-width: calc(50vw - 3.6rem - 0.8rem);
+          width: 3.4rem;
+          max-width: calc(50vw - 3.6rem - 0.8rem);
 
-          min-width: 34rem;
-          width: 45vw;
+          img {
+            width: 100%;
+          }
         }
       }
     }
@@ -551,6 +560,7 @@
 
     .last-section {
       width: calc(100vw - 6.8rem);
+      gap: 24px;
 
       h3 {
         width: 45vw;

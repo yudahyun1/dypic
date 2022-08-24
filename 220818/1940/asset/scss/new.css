@@ -219,7 +219,7 @@
   color: #fff;
 }
 
-@media screen and (max-width: 1220px) and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1220px) {
   .page-experience .sec_featured.look-up-wrap .first-lookUp {
     gap: 14px;
     box-sizing: border-box;
@@ -251,6 +251,10 @@
     width: calc(100vw - 6.4rem);
     margin: 6rem auto 0;
   }
+  .page-experience .last-section {
+    border: 1px solid red;
+    gap: 24px;
+  }
 }
 @media screen and (min-width: 1025px) and (max-width: 1156px) {
   .page-experience .sec_featured.look-up-wrap .first-lookUp .responsiveImg-txt-wrap {
@@ -262,8 +266,12 @@
     margin: 0 auto;
   }
   .page-experience .last-section div.flex-wrap figure {
-    min-width: 34rem;
-    width: 45vw;
+    min-width: calc(50vw - 3.6rem - 0.8rem);
+    width: 3.4rem;
+    max-width: calc(50vw - 3.6rem - 0.8rem);
+  }
+  .page-experience .last-section div.flex-wrap figure img {
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -352,6 +360,7 @@
   }
   .page-experience .last-section {
     width: calc(100vw - 6.8rem);
+    gap: 24px;
   }
   .page-experience .last-section h3 {
     width: 45vw;
