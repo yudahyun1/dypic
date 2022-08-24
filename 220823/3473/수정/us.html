@@ -1,0 +1,1068 @@
+<style>
+  .rawcode_showcase_Editor {
+    color: #fff;
+    background-color: #000000;
+    text-align: center;
+  }
+
+  .rawcode_showcase_Editor.whiteColor {
+    background-color: #ffffff;
+  }
+
+  .rawcode_showcase_Editor.whiteColor * {
+    color: #000000;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__headline {
+    padding-top: 160px;
+    margin-bottom: 80px;
+    font-family: "Samsung Sharp Sans", sans-serif;
+    font-size: 5.4rem;
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headline {
+      font-size: 4.2rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headline {
+      font-size: 2.4rem;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__headtitle {
+    margin-bottom: 20px;
+    font-family: "Samsung One", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.41;
+    font-weight: 400;
+    color: #dddddd;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headtitle {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headtitle {
+      font-size: 1.4rem;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-chips {
+    margin-bottom: calc(64px - 8px);
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    -o-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    border: none;
+    vertical-align: middle;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    font-weight: 700;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    /**/
+    padding: 0 24px;
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 0 4px 8px;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_chip:disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_chip [aria-disabled='true'] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.btn-large {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 24px;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.btn-medium {
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    padding: 0 16px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_chip.btn-medium {
+      height: 32px;
+      line-height: 32px;
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_chip.btn-medium {
+      padding: 0 12px;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.btn-small {
+    height: 28px;
+    line-height: 28px;
+    font-size: 10px;
+    padding: 0 16px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_chip.btn-small {
+      height: 28px;
+      line-height: 28px;
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_chip.btn-small {
+      padding: 0 12px;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.none-border {
+    border: none;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.icon-left:before {
+    content: '';
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    -o-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.icon-right:after {
+    content: '';
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    -o-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg.icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:active,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:focus-visible {
+    color: #dddddd;
+    border-color: #dddddd;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:active.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:active.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:focus-visible.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:focus-visible.icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dddddd' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  @media (hover: hover) {
+    .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:hover {
+      color: #dddddd;
+      border-color: #dddddd;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:hover.icon-left:before,
+    .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:hover.icon-right:after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dddddd' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg.disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg [aria-disabled='true'] {
+    color: #555555;
+    border-color: #555555;
+    background-color: transparent;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg.disabled.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg.disabled.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:disabled.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg:disabled.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg [aria-disabled='true'].icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.dark-bg [aria-disabled='true'].icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23555555' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg {
+    color: #000000;
+    border: 1px solid #000000;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg.icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:active,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:focus-visible {
+    color: #555555;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-color: #555555;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:active.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:active.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:focus-visible.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:focus-visible.icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23555555' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  @media (hover: hover) {
+    .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:hover {
+      color: #555555;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-color: #555555;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:hover.icon-left:before,
+    .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:hover.icon-right:after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23555555' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg.disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg [aria-disabled='true'] {
+    color: #dddddd;
+    background-color: transparent;
+    border-color: #dddddd;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg.disabled.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg.disabled.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:disabled.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg:disabled.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg [aria-disabled='true'].icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_chip.light-bg [aria-disabled='true'].icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dddddd' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper {
+    max-width: 1219px;
+    margin: 0 auto;
+    padding: 0 32px 220px;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper .swiper-pagination-bullet {
+    background: #ffffff;
+    opacity: 0.4;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__headline+.rawcode_showcase_Editor__sns {
+    margin-top: -56px;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__sns {
+    margin-bottom: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  @supports (gap: 0 12px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__sns {
+      gap: 0 12px;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__sns dd {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-right: 12px;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__sns dd>* {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__sns dd>**:last-child {
+    margin-right: 0;
+  }
+
+  @supports (gap: 0 12px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__sns dd {
+      margin: 0;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__sns__btn-facebook {
+    background-image: url("/content/dam/samsung/semiconductor/newsroom/tech-blog/icon-share-facebook.svg");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__sns__btn-twitter {
+    background-image: url("/content/dam/samsung/semiconductor/newsroom/tech-blog/icon-share-twitter.svg");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__sns__btn-in {
+    background-image: url("/content/dam/samsung/semiconductor/newsroom/tech-blog/icon-share-linked-in.svg");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__sns__btn-mail {
+    background-image: url("/content/dam/samsung/semiconductor/newsroom/tech-blog/icon-share-mail.svg");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor__sns__btn-link {
+    background-image: url("/content/dam/samsung/semiconductor/newsroom/tech-blog/icon-share-link.svg");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum-wrap {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 274px;
+    display: block;
+    isolation: isolate;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum {
+    padding-bottom: 100%;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: none;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-slide {
+    position: relative;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-video-btn {
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: url("/content/dam/samsung/semiconductor/newsroom/tech-blog/icon-video.svg") 0 0/100% 100%;
+    z-index: 1;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc {
+    padding: 24px 32px 32px 32px;
+    text-align: left;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__eyebrow {
+    font-size: 1.4rem;
+    font-family: "Samsung Sharp Sans", sans-serif;
+    margin-bottom: 6px;
+    letter-spacing: 1.33px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__eyebrow {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__eyebrow {
+      font-size: 1rem;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__title {
+    font-family: "Samsung One", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.41;
+    font-weight: 700;
+    font-family: "Samsung Sharp Sans", sans-serif;
+    display: block;
+    display: -webkit-box;
+    max-height: 3em;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    line-height: 1.5em;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    height: 48px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__title {
+      font-size: 1.6rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__title {
+      font-size: 1.4rem;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info {
+    margin: 24px 0 0 0;
+    font-family: "Samsung One", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #555555;
+    line-height: 1.33;
+    font-weight: 700;
+    color: #dddddd;
+    text-transform: none;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info {
+      font-size: 1.2rem;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info-time {
+    font-family: "Samsung One", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #555555;
+    line-height: 1.33;
+    font-weight: 700;
+    text-transform: none;
+    color: #dddddd;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info-time {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info-time {
+      font-size: 1.2rem;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info-time+.rawcode_showcase_Editor-swiper-desc__info-author {
+    margin-left: 8px;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info-time+.rawcode_showcase_Editor-swiper-desc__info-author::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #8f8f8f;
+    margin-right: 8px;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    -o-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    border: none;
+    vertical-align: middle;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    font-weight: 700;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    /**/
+    padding: 0 24px;
+    border-radius: 20px;
+    background-color: transparent;
+    margin: 0 6px 6px 0;
+    font-weight: bold;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item:disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item [aria-disabled='true'] {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.btn-large {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 24px;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.btn-medium {
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    padding: 0 16px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.btn-medium {
+      height: 32px;
+      line-height: 32px;
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.btn-medium {
+      padding: 0 12px;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.btn-small {
+    height: 28px;
+    line-height: 28px;
+    font-size: 10px;
+    padding: 0 16px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.btn-small {
+      height: 28px;
+      line-height: 28px;
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.btn-small {
+      padding: 0 12px;
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.none-border {
+    border: none;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.icon-left:before {
+    content: '';
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    -o-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.icon-right:after {
+    content: '';
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    -o-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg.icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:active,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:focus-visible {
+    color: #dddddd;
+    border-color: #dddddd;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:active.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:active.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:focus-visible.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:focus-visible.icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dddddd' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  @media (hover: hover) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:hover {
+      color: #dddddd;
+      border-color: #dddddd;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:hover.icon-left:before,
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:hover.icon-right:after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dddddd' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg.disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg [aria-disabled='true'] {
+    color: #555555;
+    border-color: #555555;
+    background-color: transparent;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg.disabled.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg.disabled.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:disabled.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg:disabled.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg [aria-disabled='true'].icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.dark-bg [aria-disabled='true'].icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23555555' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg {
+    color: #000000;
+    border: 1px solid #000000;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg.icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:active,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:focus-visible {
+    color: #555555;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-color: #555555;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:active.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:active.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:focus-visible.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:focus-visible.icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23555555' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  @media (hover: hover) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:hover {
+      color: #555555;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-color: #555555;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:hover.icon-left:before,
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:hover.icon-right:after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23555555' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg.disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:disabled,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg [aria-disabled='true'] {
+    color: #dddddd;
+    background-color: transparent;
+    border-color: #dddddd;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg.disabled.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg.disabled.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:disabled.icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg:disabled.icon-right:after,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg [aria-disabled='true'].icon-left:before,
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.light-bg [aria-disabled='true'].icon-right:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23dddddd' fill-rule='nonzero'%3E%3Cg%3E%3Cpath d='M8 12.209L1.942 6.06 2.892 5.124 8 10.309 13.108 5.124 14.058 6.06z' transform='translate(-24.000000, -12.000000) translate(24.000000, 12.000000)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-buttons {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-buttons>button {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-buttons>button.rawcode_showcase_Editor-button-prev::before {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+    -ms-transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-buttons>button.rawcode_showcase_Editor-button-next {
+    right: 8px;
+    left: auto;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-buttons>button::before {
+    content: '';
+    display: inline-block;
+    background: url("/content/dam/samsung/semiconductor/newsroom/tech-blog/icon-regular-navigation-next.svg") 0 0/100%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-buttons>button.swiper-button-disabled::before {
+    opacity: 0.3;
+  }
+
+  .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-pagination {
+    display: none;
+    margin-top: 36px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headline {
+      padding-top: 120px;
+      margin-bottom: 60px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headtitle {
+      margin-bottom: 24px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper {
+      padding: 0 32px 140px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headline+.rawcode_showcase_Editor__sns {
+      margin-top: -36px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__sns {
+      margin-bottom: 60px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__title {
+      height: 46px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper {
+      padding: 0 32px 84px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc {
+      position: relative;
+      padding: 18px 18px 0 18px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-chips {
+      margin-bottom: calc(56px - 8px);
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum img {
+      min-width: 100%;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum img.padding-img {
+      padding: 50px;
+      background: #fff;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum-wrap {
+      height: 252px;
+      border-radius: 25px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-video-btn {
+      width: 72px;
+      height: 72px;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info {
+      font-size: 1.2rem;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-buttons {
+      display: none;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags-item.btn-small {
+      font-size: 1rem;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-pagination {
+      margin-top: 44px;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headline {
+      padding-top: 100px;
+      margin-bottom: 40px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headtitle {
+      margin-bottom: 16px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__title {
+      height: 40px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-chips {
+      margin-bottom: calc(32px - 8px);
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum-wrap {
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum {
+      padding-bottom: 0;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum:hover img {
+      -webkit-transform: none !important;
+      -ms-transform: none !important;
+      transform: none !important;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper__thum img {
+      position: relative;
+      top: 0;
+      left: 0;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none;
+      max-width: 100%;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper {
+      padding: 0 24px 100px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__headline+.rawcode_showcase_Editor__sns {
+      margin-top: -16px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor__sns {
+      margin-bottom: 40px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc {
+      padding: 20px 24px 0;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc__info {
+      margin-top: 24px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-desc-tags {
+      margin-top: 8px;
+    }
+
+    .rawcode_showcase_Editor .rawcode_showcase_Editor-swiper-pagination {
+      margin-top: 32px;
+    }
+  }
+</style>
+<main>
+  <!-- /* 배경색 화이트인경우 whiteColor 클래스 추가*/ -->
+  <!-- /* Headline text for Analytics 태깅영역 아님 */-->
+  <section class="rawcode_showcase_Editor none">
+    <h2 class="rawcode_showcase_Editor__headline highContrastTarget">Editor's Choice</h2>
+
+    <div class="rawcode_showcase_Editor-swiper">
+      <div class="swiper-container rawcode_showcase_Editor-swiper-container">
+        <ul class="swiper-wrapper rawcode_showcase_Editor-swiper-wrapper">
+          <li class="swiper-slide rawcode_showcase_Editor-swiper-slide">
+            <a href="/content/semiconductor/us/newsroom/tech-blog/expanding-the-limits-of-memory-bandwidth-and-density-samsungs-cxl-dram-memory-expander.html" data-an-tr="body contents" data-an-ca="link click" data-an-ac="headline text" data-an-la="none" class="rawcode_showcase_Editor-swiper__thum-wrap">
+              <figure class="rawcode_showcase_Editor-swiper__thum img-hover-effect-translate">
+                <img src="/content/dam/samsung/semiconductor/newsroom/tech-blog/editor%27s-choice/220805/Thumbnail_LatestNews_M_PC%20–%201.png" alt="Samsung Introduces the Industry’s First 5nm Processor Powering the Next Generation of Wearables" />
+              </figure>
+            </a>
+            <div class="rawcode_showcase_Editor-swiper-desc">
+              <a href="/content/semiconductor/us/newsroom/tech-blog/isocell-hp1-resolution-redefined.html" class="rawcode_showcase_Editor-swiper-desc__title highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="headline text" data-an-la="none">Expanding the Limits of Memory Bandwidth and Density: Samsung’s CXL Memory Expander</a>
+              <div class="rawcode_showcase_Editor-swiper-desc__info">
+                <time class="rawcode_showcase_Editor-swiper-desc__info-time" datetime="2022-07-28">Jul 28, 2022</time>
+              </div>
+              <div class="rawcode_showcase_Editor-swiper-desc-tags">
+                <a href="/content/semiconductor/us/hashtag.html?searchvalue=CXL" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="CXL">CXL</a>
+                <a href="/content/semiconductor/us/hashtag.html?searchvalue=DRAM" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="DRAM">DRAM</a>
+                <!--<a href="/content/semiconductor/us/hashtag.html?searchvalue=UFS 3.1" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="UFS 3.1">ISOCELL HP1</a>-->
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide rawcode_showcase_Editor-swiper-slide">
+            <a href="/content/semiconductor/us/newsroom/tech-blog/isocell-hp1-resolution-redefined.html" data-an-tr="body contents" data-an-ca="link click" data-an-ac="headline text" data-an-la="none" class="rawcode_showcase_Editor-swiper__thum-wrap">
+              <figure class="rawcode_showcase_Editor-swiper__thum img-hover-effect-translate">
+                <img class="padding-img" src="/content/dam/samsung/semiconductor/newsroom/tech-blog/editor%27s-choice/220805/Thumbnail_LatestNews_M_PC.png" alt="Samsung Develops Industry’s First HKMG-Based DDR5 Memory; Ideal for Bandwidth-Intensive Advanced Computing Applications" />
+              </figure>
+              <!--/* video 일 때 추가 rawcode_showcase_Editor-swiper-video-btn 버튼 */-->
+              <!-- <a href="#none" aria-label="link to video" class="rawcode_showcase_Editor-swiper-video-btn" data-an-tr="body contents" data-an-ca="content click" data-an-ac="play icon" data-an-la="none"></a> -->
+            </a>
+            <div class="rawcode_showcase_Editor-swiper-desc">
+              <a href="/content/semiconductor/us/newsroom/tech-blog/isocell-hp1-resolution-redefined.html" class="rawcode_showcase_Editor-swiper-desc__title highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="headline text" data-an-la="none">[Video] ISOCELL HP1: Resolution redefined</a>
+              <div class="rawcode_showcase_Editor-swiper-desc__info">
+                <time class="rawcode_showcase_Editor-swiper-desc__info-time" datetime="2021-09-20">Sep 20, 2021</time>
+              </div>
+              <div class="rawcode_showcase_Editor-swiper-desc-tags">
+                <a href="/content/semiconductor/us/hashtag.html?searchvalue=Mobile Image Sensor" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="Mobile Image Sensor">Mobile Image Sensor</a>
+                <a href="/content/semiconductor/us/hashtag.html?searchvalue=Image Sensor" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="Image Sensor">Image Sensor</a>
+                <a href="/content/semiconductor/us/hashtag.html?searchvalue=ISOCELL HP1" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="ISOCELL HP1">ISOCELL HP1</a>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide rawcode_showcase_Editor-swiper-slide">
+            <a href="/content/semiconductor/us/newsroom/tech-blog/gaa-dtco-for-ppa.html" data-an-tr="body contents" data-an-ca="link click" data-an-ac="headline text" data-an-la="none" class="rawcode_showcase_Editor-swiper__thum-wrap">
+              <figure class="rawcode_showcase_Editor-swiper__thum img-hover-effect-translate">
+                <img src="/content/dam/samsung/semiconductor/newsroom/tech-blog/220823/Thumbnail_LatestNews_M_PC.png" alt="Samsung Begins Mass Production of Data Center SSD Customized for Hyperscale Environments" />
+              </figure>
+            </a>
+            <div class="rawcode_showcase_Editor-swiper-desc">
+              <a href="/content/semiconductor/us/newsroom/tech-blog/gaa-dtco-for-ppa.html" class="rawcode_showcase_Editor-swiper-desc__title highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="headline text" data-an-la="none">Find the optimal for the best. <br />Part 1</a>
+              <div class="rawcode_showcase_Editor-swiper-desc__info">
+                <time class="rawcode_showcase_Editor-swiper-desc__info-time" datetime="2022-04-18">Apr 18, 2022</time>
+              </div>
+              <div class="rawcode_showcase_Editor-swiper-desc-tags">
+                <a href="/content/semiconductor/us/hashtag.html?searchvalue=MBCFET" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="MBCFET">MBCFET</a>
+                <a href="/content/semiconductor/us/hashtag.html?searchvalue=DTCO" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="DTCO">DTCO</a>
+                <a href="/content/semiconductor/us/hashtag.html?searchvalue=Foundry" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="Foundry">Foundry</a>
+                <a href="/content/semiconductor/us/hashtag.html?searchvalue=GAA" class="rawcode_showcase_Editor-swiper-desc-tags-item dark-bg btn-small font-small highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="chips" data-an-la="GAA">GAA</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="rawcode_showcase_Editor-swiper-pagination"></div>
+
+        <div class="rawcode_showcase_Editor-swiper-buttons">
+          <button type="button" class="rawcode_showcase_Editor-button-prev" data-an-tr="body contents" data-an-ca="content click" data-an-ac="arrow left" data-an-la="none"></button>
+          <button type="button" class="rawcode_showcase_Editor-button-next" data-an-tr="body contents" data-an-ca="content click" data-an-ac="arrow right" data-an-la="none"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

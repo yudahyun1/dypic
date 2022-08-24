@@ -1,0 +1,428 @@
+
+ 
+    /* Component Name */
+    .pc_only {
+      display: block;
+    }
+
+    .ta_only,
+    .m_only {
+      display: none;
+    }
+
+    @media screen and (max-width: 1023px) {
+      .ta_only {
+        display: block;
+      }
+
+      .home-newly_section1__feature_subtitle.highContrastTarget .pc_only,
+      .home-newly_section1__feature_subtitle.highContrastTarget .m_only {
+        display: none !important;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .home-newly_section1__feature_subtitle.highContrastTarget .m_only {
+        display: block !important;
+      }
+
+      .pc_only,
+      .ta_only {
+        display: none;
+      }
+    }
+
+    .home-newly-launched {
+      overflow: hidden;
+    }
+
+    .home-newly-launched .home-newly_section1 {
+      max-width: 1392px;
+      padding: 120px 0 80px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 10;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 40px 72px;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup[aria-hidden='true'] {
+      display: none;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup[aria-hidden='false'] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup .btnPlayVideoClose {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 36px;
+      height: 36px;
+      background: url('/content/dam/samsung/semiconductor/products/pcd/memory_pcd_ssd/img/icon-regular-action-cancel-close.svg') no-repeat center/100%;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con {
+      position: relative;
+      width: 100%;
+      max-width: 1440px;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video video,
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video iframe,
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video object,
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .home-newly-launched .home-newly_section1__title_tit {
+      font-family: 'Samsung Sharp Sans', sans-serif;
+      font-weight: 700;
+      font-size: 3.2rem;
+    }
+
+    .home-newly-launched .home-newly_section1__title_stit {
+      padding-top: 20px;
+      font-family: 'Samsung Sharp Sans', sans-serif;
+      font-weight: 700;
+      font-size: 4.8rem;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper {
+      margin-top: 80px;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_item {
+      width: 33.333%;
+    }
+
+    .home-newly-launched .home-newly_section1__feature {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .home-newly-launched .home-newly_section1__feature_subtitle {
+      width: 100%;
+      text-align: center;
+      padding: 24px 0;
+      font-family: 'Samsung Sharp Sans', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      color: #000000;
+    }
+
+    .home-newly-launched .home-newly_section1_linkbtn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      display: block;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .home-newly-launched .home-newly_section1_playbtn {
+      height: calc(100% - 115px);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* height: 100%; */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      border-radius: 30px;
+      z-index: 1;
+      font-size: 0;
+    }
+
+    .home-newly-launched .home-newly_section1_playbtn:after {
+      content: '';
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background: url('/etc.clientlibs/semiconductor/designs/global/common/resources/img/icon/icon-play.svg') no-repeat center/100%;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_pagination {
+      display: none;
+      padding-top: 40px;
+      height: 48px;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_pagination .swiper-pagination-bullet {
+      background-color: #000;
+      vertical-align: top;
+      margin: 0 6px;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_pagination .swiper-pagination-bullet-active {
+      background-color: #000;
+    }
+
+    @media screen and (max-width: 1023px) {
+
+
+
+      .home-newly-launched .home-newly_section1 {
+        padding: 80px 32px 60px;
+      }
+
+      .home-newly-launched .home-newly_section1 .home-newly_section1__popup {
+        padding: 0;
+      }
+
+      .home-newly-launched .home-newly_section1 .home-newly_section1__popup .btnPlayVideoClose {
+        width: 24px;
+        height: 24px;
+      }
+
+      .home-newly-launched .home-newly_section1__title_tit {
+        font-size: 2.4rem;
+      }
+
+      .home-newly-launched .home-newly_section1__title_stit {
+        padding-top: 12px;
+        font-size: 3.4rem;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper {
+        margin-top: 60px;
+        overflow: visible;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper_item {
+        max-width: 316px;
+      }
+
+      .home-newly-launched .home-newly_section1__feature {
+        border-radius: 25px;
+      }
+
+      .home-newly-launched .home-newly_section1__feature_subtitle {
+        padding: 20px 24px 16px;
+        font-size: 2rem;
+        letter-spacing: -0.1px;
+      }
+
+      .home-newly-launched .home-newly_section1_linkbtn {
+        border-radius: 25px;
+      }
+
+      .home-newly-launched .home-newly_section1_playbtn {
+        border-radius: 25px;
+      }
+
+      .home-newly-launched .home-newly_section1_playbtn:after {
+        width: 40px;
+        height: 40px;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper_pagination {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+
+
+      .home-newly-launched .home-newly_section1 {
+        padding: 80px 24px 40px;
+      }
+
+      .home-newly-launched .home-newly_section1__title_tit {
+        font-size: 1.8rem;
+      }
+
+      .home-newly-launched .home-newly_section1__title_stit {
+        font-size: 2.4rem;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper {
+        margin-top: 48px;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper_item {
+        max-width: 100%;
+      }
+
+      .home-newly-launched .home-newly_section1__feature {
+        border-radius: 25px;
+      }
+
+      .home-newly-launched .home-newly_section1__feature picture>img {
+        max-width: none;
+        width: 100%;
+      }
+
+      .home-newly-launched .home-newly_section1__feature_subtitle {
+        padding: 16px 32px 12px;
+        font-size: 1.6rem;
+      }
+
+      .home-newly-launched .home-newly_section1_linkbtn {
+        border-radius: 20px;
+      }
+
+      .home-newly-launched .home-newly_section1_playbtn {
+        border-radius: 20px;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper_pagination {
+        height: 36px;
+        padding-top: 24px;
+      }
+    }
+
+    @media screen and (max-width: 1023px) {
+      .home-newly-launched .home-newly_section1 {
+        padding: 80px 32px 60px;
+      }
+
+      .home-newly-launched .home-newly_section1 .home-newly_section1__popup {
+        padding: 0;
+      }
+
+      .home-newly-launched .home-newly_section1 .home-newly_section1__popup .btnPlayVideoClose {
+        width: 24px;
+        height: 24px;
+      }
+
+      .home-newly-launched .home-newly_section1__title_tit {
+        font-size: 2.4rem;
+      }
+
+      .home-newly-launched .home-newly_section1__title_stit {
+        padding-top: 12px;
+        font-size: 3.4rem;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper {
+        margin-top: 60px;
+        overflow: visible;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper_item {
+        max-width: 316px;
+      }
+
+      .home-newly-launched .home-newly_section1__feature {
+        border-radius: 25px;
+      }
+
+      .home-newly-launched .home-newly_section1__feature_subtitle {
+        padding: 20px 24px 16px;
+        font-size: 2rem;
+        letter-spacing: -0.1px;
+      }
+
+      .home-newly-launched .home-newly_section1_linkbtn {
+        border-radius: 25px;
+      }
+
+      .home-newly-launched .home-newly_section1_playbtn {
+        border-radius: 25px;
+        height: calc(100% - 91px);
+      }
+
+      .home-newly-launched .home-newly_section1_playbtn:after {
+        width: 40px;
+        height: 40px;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper_pagination {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {}
+
+    @media screen and (max-width: 767px) {
+      .home-newly-launched .home-newly_section1 {
+        padding: 80px 24px 40px;
+      }
+
+      .home-newly-launched .home-newly_section1__title_tit {
+        font-size: 1.8rem;
+      }
+
+      .home-newly-launched .home-newly_section1__title_stit {
+        font-size: 2.4rem;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper {
+        margin-top: 48px;
+      }
+
+      .home-newly-launched .home-newly_section1_swiper_item {
+        max-width: 100%;
+      }
+
+      .home-newly-launched .home-newly_section1__feature {
+        border-radius: 25px;
+      }
+
+      .home-newly-launched .home-newly_section1__feature picture>img {
+        max-width: none;
+        width: 100%;
+      }
+
+      .home-newly-launched .home-newly_section1__feature_subtitle {
+        padding: 16px 32px 12px;
+        font-size: 1.6rem;
+      }
+
+      .home-newly-launched .home-newly_section1_linkbtn {
+        border-radius: 20px;
+      }
+
+      .home-newly-launched .home-newly_section1_playbtn {
+        border-radius: 20px;
+        height: calc(100% - 71px);
+      }
+
+      .home-newly-launched .home-newly_section1_swiper_pagination {
+        height: 36px;
+        padding-top: 24px;
+      }
+    }
+  

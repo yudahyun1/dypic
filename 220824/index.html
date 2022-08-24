@@ -1,0 +1,457 @@
+<style>
+  /* Component Name */
+  .m-only-show {
+    display: none;
+  }
+
+  .m-hide-br {
+    display: block;
+  }
+
+  .home-event {
+    overflow: hidden;
+  }
+
+  .home-event .home-event_section1 {
+    max-width: 1392px;
+    padding: 100px 0 120px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .home-event .home-event_section1 .home-event_section1__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 40px 72px;
+  }
+
+  .home-event .home-event_section1 .home-event_section1__popup[aria-hidden='true'] {
+    display: none;
+  }
+
+  .home-event .home-event_section1 .home-event_section1__popup[aria-hidden='false'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .home-event .home-event_section1 .home-event_section1__popup .btnPlayVideoClose {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    background: url('/content/dam/samsung/semiconductor/products/pcd/memory_pcd_ssd/img/icon-regular-action-cancel-close.svg') no-repeat center/100%;
+  }
+
+  .home-event .home-event_section1 .home-event_section1__popup .home-event_section1__popup-con {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  .home-event .home-event_section1 .home-event_section1__popup .home-event_section1__popup-con .home-event_section1__popup-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .home-event .home-event_section1 .home-event_section1__popup .home-event_section1__popup-con .home-event_section1__popup-video video,
+  .home-event .home-event_section1 .home-event_section1__popup .home-event_section1__popup-con .home-event_section1__popup-video iframe,
+  .home-event .home-event_section1 .home-event_section1__popup .home-event_section1__popup-con .home-event_section1__popup-video object,
+  .home-event .home-event_section1 .home-event_section1__popup .home-event_section1__popup-con .home-event_section1__popup-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-event .home-event_section1__title_tit {
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    font-weight: 700;
+    font-size: 3.2rem;
+  }
+
+  .home-event .home-event_section1__title_stit {
+    padding-top: 20px;
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    font-weight: 700;
+    font-size: 4.8rem;
+  }
+
+  .home-event .home-event_section1_swiper {
+    margin-top: 80px;
+  }
+
+  .home-event .home-event_section1_swiper_item {
+    width: 448px;
+    margin-right: 24px;
+  }
+
+  .home-event .home-event_section1__feature {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home-event .home-event_section1__feature_subtitle {
+    width: 100%;
+    text-align: center;
+    margin-top: 24px;
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    color: #000000;
+  }
+
+  .home-event .home-event_section1_text_btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    -webkit-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    -o-transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    transition: background cubic-bezier(0.4, 0, 0.2, 1) 0.2s, color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, border-color cubic-bezier(0.4, 0, 0.2, 1) 0.2s, font-weight cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    border: none;
+    vertical-align: middle;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    font-weight: 700;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    padding: 0 24px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 32px;
+  }
+
+  .home-event .home-event_section1_text_btn.btn_line {
+    height: auto;
+    margin-right: 32px;
+    padding: 0 0 1px 0;
+    border-bottom: 2px solid #000000;
+    border-radius: 0;
+  }
+
+  .home-event .home-event_section1_text_btn.light-bg {
+    color: #ffffff;
+    background-color: #000000;
+  }
+
+  .home-event .home-event_section1_text_btn.light-bg:hover {
+    color: #eeeeee;
+    background-color: #333333;
+  }
+
+  .home-event .home-event_section1_text_btn.btn-large {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .home-event .home-event_section1_linkbtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .home-event .home-event_section1_playbtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 30px;
+    z-index: 1;
+    font-size: 0;
+  }
+
+  .home-event .home-event_section1_playbtn:after {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: url('/etc.clientlibs/semiconductor/designs/global/common/resources/img/icon/icon-play.svg') no-repeat center/100%;
+  }
+
+  .home-event .home-event_section1_swiper_pagination {
+    display: none;
+    padding-top: 40px;
+    height: 48px;
+  }
+
+  .home-event .home-event_section1_swiper_pagination .swiper-pagination-bullet {
+    background-color: #000;
+    vertical-align: top;
+    margin: 0 6px;
+  }
+
+  .home-event .home-event_section1_swiper_pagination .swiper-pagination-bullet-active {
+    background-color: #000;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1390px) {
+    .home-event .home-event_section1_swiper {
+      margin-right: 24px;
+      margin-left: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .home-event .home-event_section1 {
+      padding: 80px 32px 80px;
+    }
+
+    .home-event .home-event_section1 .home-event_section1__popup {
+      padding: 0;
+    }
+
+    .home-event .home-event_section1 .home-event_section1__popup .btnPlayVideoClose {
+      width: 24px;
+      height: 24px;
+    }
+
+    .home-event .home-event_section1__title_tit {
+      font-size: 2.4rem;
+    }
+
+    .home-event .home-event_section1__title_stit {
+      padding-top: 12px;
+      font-size: 3.4rem;
+      line-height: 48px;
+    }
+
+    .home-event .home-event_section1_swiper {
+      margin-top: 60px;
+      overflow: visible;
+    }
+
+    .home-event .home-event_section1_swiper_item {
+      max-width: 316px;
+    }
+
+    .home-event .home-event_section1__feature {
+      border-radius: 25px;
+    }
+
+    .home-event .home-event_section1__feature_subtitle {
+      margin-top: 20px;
+      font-size: 2rem;
+      line-height: 28px;
+      letter-spacing: -0.1px;
+    }
+
+    .home-event .home-event_section1_text_btn {
+      margin-top: 28px;
+    }
+
+    .home-event .home-event_section1_text_btn.btn_line {
+      margin-right: 24px;
+    }
+
+    .home-event .home-event_section1_linkbtn {
+      border-radius: 25px;
+    }
+
+    .home-event .home-event_section1_playbtn {
+      border-radius: 25px;
+    }
+
+    .home-event .home-event_section1_playbtn:after {
+      width: 40px;
+      height: 40px;
+    }
+
+    .home-event .home-event_section1_swiper_pagination {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .m-hide-br {
+      display: none;
+    }
+
+    .home-event .home-event_section1 {
+      padding: 80px 24px;
+    }
+
+    .home-event .home-event_section1__title_tit {
+      font-size: 1.8rem;
+      line-height: 25px;
+    }
+
+    .home-event .home-event_section1__title_stit {
+      font-size: 2.4rem;
+      line-height: 34px;
+    }
+
+    .home-event .home-event_section1_swiper {
+      margin-top: 48px;
+    }
+
+    .home-event .home-event_section1_swiper_item {
+      max-width: 100%;
+    }
+
+    .home-event .home-event_section1__feature {
+      border-radius: 25px;
+    }
+
+    .home-event .home-event_section1__feature picture>img {
+      max-width: none;
+      width: 100%;
+    }
+
+    .home-event .home-event_section1__feature_subtitle {
+      margin-top: 16px;
+      padding: 0 32px;
+      font-size: 1.6rem;
+      line-height: 23px;
+    }
+
+    .home-event .home-event_section1_text_btn {
+      margin-top: 24px;
+    }
+
+    .home-event .home-event_section1_linkbtn {
+      border-radius: 20px;
+    }
+
+    .home-event .home-event_section1_playbtn {
+      border-radius: 20px;
+    }
+
+    .home-event .home-event_section1_swiper_pagination {
+      height: 36px;
+      padding-top: 32px;
+    }
+  }
+</style>
+<div class="home-event">
+  <div class="home-event_wrap">
+    <div class="home-event_section1">
+      <h2 class="home-event_section1__title">
+        <p class="home-event_section1__title_tit highContrastTarget">Samsung Foundry Forum 2022</p>
+        <p class="home-event_section1__title_stit highContrastTarget">インスピレーションを見つけましょう。<br />素晴らしい人々に出会いましょう。<br />実行可能な新しいアイデアを持ち帰りましょう。</p>
+        <a href="/content/semiconductor/jp/event/foundry-events-2022.html" class="home-event_section1_text_btn dark-bg btn_line highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="もっと見る" data-an-la="foundry events 2022">もっと見る</a>
+        <a href="http://www.samsungfoundryevent.com/jp/2022" class="home-event_section1_text_btn light-bg btn-large highContrastTarget pop_open" data-an-tr="body contents" data-an-ca="outbound clik" data-an-ac="今すぐ登録" data-an-la="foundry events 2022">今すぐ登録</a>
+      </h2>
+
+      <div class="home-event_section1_swiper swiper-container">
+        <ul class="home-event_section1_swiper_wrapper swiper-wrapper">
+          <li class="home-event_section1_swiper_item swiper-slide">
+            <div class="home-event_section1__feature">
+              <figure>
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_01_PC.png" />
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_01_TAB.png" />
+                  <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_01_MO.png" />
+                  <img src="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_01_PC.png" alt="" />
+                </picture>
+                <figcaption>専用ページにアクセス Samsung Foundry Forum 2022</figcaption>
+              </figure>
+              <p class="home-event_section1__feature_subtitle highContrastTarget">
+                専用ページにアクセス <br />
+                Samsung Foundry Forum 2022
+              </p>
+              <!-- 링크이동 시 a -->
+              <a href="/content/semiconductor/jp/event/foundry-events-2022.html" class="home-event_section1_linkbtn highContrastTarget" data-an-tr="body contents" data-an-ca="link clik" data-an-ac="image block" data-an-la="newly launched grid"></a>
+              <!-- 링크이동 시 a -->
+            </div>
+          </li>
+          <li class="home-event_section1_swiper_item swiper-slide">
+            <div class="home-event_section1__feature">
+              <figure>
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_02_PC.png" />
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_02_TAB.png" />
+                  <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_02-1_MO.png" />
+                  <img src="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_02_PC.png" alt="" />
+                </picture>
+                <figcaption>起業家としての 次なるステップ</figcaption>
+              </figure>
+              <p class="home-event_section1__feature_subtitle highContrastTarget">起業家としての <br />次なるステップ</p>
+              <!-- 링크이동 시 a -->
+              <a href="/content/semiconductor/jp/event/foundry-events-2022.html" class="home-event_section1_linkbtn highContrastTarget" data-an-tr="body contents" data-an-ca="link clik" data-an-ac="image block" data-an-la="newly launched grid"></a>
+              <!-- 링크이동 시 a -->
+            </div>
+          </li>
+          <li class="home-event_section1_swiper_item swiper-slide">
+            <div class="home-event_section1__feature">
+              <figure>
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_03_PC.png" />
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_03_TAB.png" />
+                  <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_03_MO.png" />
+                  <img src="/content/dam/samsung/semiconductor/home/event/220805/home_event_220805_03_PC.png" alt="" />
+                </picture>
+                <figcaption>将来のビジネスにつながるネットワーキングの機会を探る</figcaption>
+              </figure>
+              <p class="home-event_section1__feature_subtitle highContrastTarget">将来のビジネスにつながるネットワーキングの機会を探る</p>
+              <!-- 링크이동 시 a -->
+              <a href="/content/semiconductor/jp/event/foundry-events-2022.html" class="home-event_section1_linkbtn highContrastTarget" data-an-tr="body contents" data-an-ca="link clik" data-an-ac="image block" data-an-la="newly launched grid"></a>
+              <!-- 링크이동 시 a -->
+            </div>
+          </li>
+        </ul>
+        <div class="home-event_section1_swiper_pagination"></div>
+      </div>
+
+      <!-- /* 비디오 팝업 영역 */ -->
+      <div class="home-event_section1__popup" aria-hidden="true">
+        <div class="home-event_section1__popup-con">
+          <div class="home-event_section1__popup-video">
+            <iframe title="비디오 제목에 대한 설명" style="width: 100%; height: 100%" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <button type="button" class="btnPlayVideoClose" aria-label="video close" style="top: 84px" data-an-tr="body contents" data-an-ca="content clik" data-an-ac="close button" data-an-la="none"></button>
+      </div>
+      <!-- /* 비디오 팝업 영역 */ -->
+    </div>
+  </div>
+</div>

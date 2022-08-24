@@ -1,0 +1,500 @@
+<style>
+  /* Component Name */
+  .home-newly-launched {
+    overflow: hidden;
+  }
+
+  .home-newly-launched .home-newly_section1 {
+    max-width: 1392px;
+    padding: 120px 0 80px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 40px 72px;
+  }
+
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup[aria-hidden='true'] {
+    display: none;
+  }
+
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup[aria-hidden='false'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup .btnPlayVideoClose {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    background: url('/content/dam/samsung/semiconductor/products/pcd/memory_pcd_ssd/img/icon-regular-action-cancel-close.svg') no-repeat center/100%;
+  }
+
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video video,
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video iframe,
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video object,
+  .home-newly-launched .home-newly_section1 .home-newly_section1__popup .home-newly_section1__popup-con .home-newly_section1__popup-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-newly-launched .home-newly_section1__title_tit {
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    font-weight: 700;
+    font-size: 3.2rem;
+  }
+
+  .home-newly-launched .home-newly_section1__title_stit {
+    padding-top: 20px;
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    font-weight: 700;
+    font-size: 4.8rem;
+  }
+
+  .home-newly-launched .home-newly_section1_swiper {
+    margin-top: 80px;
+  }
+
+  .home-newly-launched .home-newly_section1_swiper_item {
+    width: 33.333%;
+  }
+
+  .home-newly-launched .home-newly_section1__feature {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .home-newly-launched .home-newly_section1__feature_subtitle {
+    width: 100%;
+    text-align: center;
+    padding: 0 48px 24px;
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+  }
+
+  .home-newly-launched .home-newly_section1_linkbtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .home-newly-launched .home-newly_section1_playbtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 30px;
+    z-index: 1;
+    font-size: 0;
+  }
+
+  .home-newly-launched .home-newly_section1_playbtn:after {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: url('/etc.clientlibs/semiconductor/designs/global/common/resources/img/icon/icon-play.svg') no-repeat center/100%;
+  }
+
+  .home-newly-launched .home-newly_section1_swiper_pagination {
+    display: none;
+    padding-top: 40px;
+    height: 48px;
+  }
+
+  .home-newly-launched .home-newly_section1_swiper_pagination .swiper-pagination-bullet {
+    background-color: #000;
+    vertical-align: top;
+    margin: 0 6px;
+  }
+
+  .home-newly-launched .home-newly_section1_swiper_pagination .swiper-pagination-bullet-active {
+    background-color: #000;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .home-newly-launched .home-newly_section1 {
+      padding: 80px 32px 60px;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup {
+      padding: 0;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup .btnPlayVideoClose {
+      width: 24px;
+      height: 24px;
+    }
+
+    .home-newly-launched .home-newly_section1__title_tit {
+      font-size: 2.4rem;
+    }
+
+    .home-newly-launched .home-newly_section1__title_stit {
+      padding-top: 12px;
+      font-size: 3.4rem;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper {
+      margin-top: 60px;
+      overflow: visible;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_item {
+      max-width: 316px;
+    }
+
+    .home-newly-launched .home-newly_section1__feature {
+      border-radius: 25px;
+    }
+
+    .home-newly-launched .home-newly_section1__feature_subtitle {
+      padding: 0 28px 16px;
+      font-size: 2rem;
+      letter-spacing: -0.1px;
+    }
+
+    .home-newly-launched .home-newly_section1_linkbtn {
+      border-radius: 25px;
+    }
+
+    .home-newly-launched .home-newly_section1_playbtn {
+      border-radius: 25px;
+    }
+
+    .home-newly-launched .home-newly_section1_playbtn:after {
+      width: 40px;
+      height: 40px;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_pagination {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .home-newly-launched .home-newly_section1 {
+      padding: 80px 24px 40px;
+    }
+
+    .home-newly-launched .home-newly_section1__title_tit {
+      font-size: 1.8rem;
+    }
+
+    .home-newly-launched .home-newly_section1__title_stit {
+      font-size: 2.4rem;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper {
+      margin-top: 48px;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_item {
+      max-width: 100%;
+    }
+
+    .home-newly-launched .home-newly_section1__feature {
+      border-radius: 25px;
+    }
+
+    .home-newly-launched .home-newly_section1__feature picture>img {
+      max-width: none;
+      width: 100%;
+    }
+
+    .home-newly-launched .home-newly_section1__feature_subtitle {
+      padding: 0 32px 12px;
+      font-size: 1.6rem;
+    }
+
+    .home-newly-launched .home-newly_section1_linkbtn {
+      border-radius: 20px;
+    }
+
+    .home-newly-launched .home-newly_section1_playbtn {
+      border-radius: 20px;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_pagination {
+      height: 36px;
+      padding-top: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .home-newly-launched .home-newly_section1 {
+      padding: 80px 32px 60px;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup {
+      padding: 0;
+    }
+
+    .home-newly-launched .home-newly_section1 .home-newly_section1__popup .btnPlayVideoClose {
+      width: 24px;
+      height: 24px;
+    }
+
+    .home-newly-launched .home-newly_section1__title_tit {
+      font-size: 2.4rem;
+    }
+
+    .home-newly-launched .home-newly_section1__title_stit {
+      padding-top: 12px;
+      font-size: 3.4rem;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper {
+      margin-top: 60px;
+      overflow: visible;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_item {
+      max-width: 316px;
+    }
+
+    .home-newly-launched .home-newly_section1__feature {
+      border-radius: 25px;
+    }
+
+    .home-newly-launched .home-newly_section1__feature_subtitle {
+      padding: 0 28px 16px;
+      font-size: 2rem;
+      letter-spacing: -0.1px;
+    }
+
+    .home-newly-launched .home-newly_section1_linkbtn {
+      border-radius: 25px;
+    }
+
+    .home-newly-launched .home-newly_section1_playbtn {
+      border-radius: 25px;
+    }
+
+    .home-newly-launched .home-newly_section1_playbtn:after {
+      width: 40px;
+      height: 40px;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_pagination {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .home-newly-launched .home-newly_section1 {
+      padding: 80px 24px 40px;
+    }
+
+    .home-newly-launched .home-newly_section1__title_tit {
+      font-size: 1.8rem;
+    }
+
+    .home-newly-launched .home-newly_section1__title_stit {
+      font-size: 2.4rem;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper {
+      margin-top: 48px;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_item {
+      max-width: 100%;
+    }
+
+    .home-newly-launched .home-newly_section1__feature {
+      border-radius: 25px;
+    }
+
+    .home-newly-launched .home-newly_section1__feature picture>img {
+      max-width: none;
+      width: 100%;
+    }
+
+    .home-newly-launched .home-newly_section1__feature_subtitle {
+      padding: 0 32px 12px;
+      font-size: 1.6rem;
+    }
+
+    .home-newly-launched .home-newly_section1_linkbtn {
+      border-radius: 20px;
+    }
+
+    .home-newly-launched .home-newly_section1_playbtn {
+      border-radius: 20px;
+    }
+
+    .home-newly-launched .home-newly_section1_swiper_pagination {
+      height: 36px;
+      padding-top: 24px;
+    }
+  }
+</style>
+<div class="home-newly-launched">
+  <div class="home-newly-launched_wrap">
+    <div class="home-newly_section1">
+      <h2 class="home-newly_section1__title">
+        <p class="home-newly_section1__title_tit highContrastTarget">Newly Launched</p>
+        <p class="home-newly_section1__title_stit highContrastTarget">Experience an immersive gameplay <br />with 990 PRO's extreme peformance.</p>
+      </h2>
+
+      <div class="home-newly_section1_swiper swiper-container">
+        <ul class="home-newly_section1_swiper_wrapper swiper-wrapper">
+          <li class="home-newly_section1_swiper_item swiper-slide">
+            <div class="home-newly_section1__feature">
+              <figure>
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_pc_1.png" />
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_tab_1.png" />
+                  <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_m_1.png" />
+                  <img src="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_pc_1.png" alt="" />
+                </picture>
+                <figcaption>The Ultimate SSD 980 PRO | 980 PRO with Heatsink</figcaption>
+              </figure>
+              <p class="home-newly_section1__feature_subtitle highContrastTarget">The Ultimate SSD <br />980 PRO | 980 PRO with Heatsink</p>
+              <!-- 링크이동 시 a -->
+              <a href="/content/semiconductor/global/newsroom/news/samsung-unveils-isocell-image-sensor-with-industrys-smallest-0-56um-pixel.html" class="home-newly_section1_linkbtn highContrastTarget" data-an-tr="body contents" data-an-ca="link clik" data-an-ac="image block" data-an-la="newly launched grid"></a>
+              <!-- 링크이동 시 a -->
+            </div>
+          </li>
+          <li class="home-newly_section1_swiper_item swiper-slide">
+            <div class="home-newly_section1__feature">
+              <figure>
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_pc_2.png" />
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_tab_2.png" />
+                  <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_m_2.png" />
+                  <img src="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_pc_2.png" alt="" />
+                </picture>
+                <figcaption>High-performance 990 PRO SSD optimized for gaming and creative applications</figcaption>
+              </figure>
+              <p class="home-newly_section1__feature_subtitle highContrastTarget">High-performance 990 PRO SSD optimized for gaming and creative applications</p>
+              <!-- 링크이동 시 a -->
+              <a href="/content/semiconductor/global/newsroom/tech-blog/how-samsungs-isocell-hp3-is-creating-epic-smartphone-image-with-resolution-that-goes-beyond-pro-cameras.html" class="home-newly_section1_linkbtn highContrastTarget" data-an-tr="body contents" data-an-ca="link clik" data-an-ac="image block" data-an-la="newly launched grid"></a>
+              <!-- 링크이동 시 a -->
+            </div>
+          </li>
+          <li class="home-newly_section1_swiper_item swiper-slide">
+            <div class="home-newly_section1__feature">
+              <figure>
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_pc_3.png" />
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_tab_3.png" />
+                  <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_m_3.png" />
+                  <img src="/content/dam/samsung/semiconductor/home/newly_launched/220823/image_pc_3.png" alt="" />
+                </picture>
+                <figcaption>Unleash peak gaming with perfect storage</figcaption>
+              </figure>
+              <p class="home-newly_section1__feature_subtitle highContrastTarget">Unleash peak gaming with <br />perfect storage</p>
+              <!-- 동영상 일때 button -->
+              <button class="home-newly_section1_playbtn highContrastTarget btnPlayVideoOpen" type="button" data-video-mobile-src="H8zAh3JVY5w" data-video-src="H8zAh3JVY5w" title="new window open" data-an-tr="body contents" data-an-ca="content clik" data-an-ac="play icon" data-an-la="H8zAh3JVY5w"></button>
+              <!-- //동영상 일때 button -->
+            </div>
+          </li>
+        </ul>
+        <div class="home-newly_section1_swiper_pagination"></div>
+      </div>
+
+      <!-- /* 비디오 팝업 영역 */ -->
+      <div class="home-newly_section1__popup" aria-hidden="true">
+        <div class="home-newly_section1__popup-con">
+          <div class="home-newly_section1__popup-video">
+            <iframe title="비디오 제목에 대한 설명" style="width: 100%; height: 100%" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <button type="button" class="btnPlayVideoClose" aria-label="video close" style="top: 84px" data-an-tr="body contents" data-an-ca="content clik" data-an-ac="close button" data-an-la="none"></button>
+      </div>
+      <!-- /* 비디오 팝업 영역 */ -->
+    </div>
+    <!-- section 2 -->
+    <!-- <div class="home-newly_section2">
+          <div class="home-newly_section2_wrap">
+            <div class="home-newly_section2_feature">
+              <figure>
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/home_newly_item_04_pc.png" />
+                  <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/home_newly_item_04_tab.png" />
+                  <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/home/newly_launched/home_newly_item_04_mo.png" />
+                  <img src="/content/dam/samsung/semiconductor/home/newly_launched/home_newly_item_04_pc.png" alt="" />
+                </picture>
+                <figcaption>ISOCELL HP3 for pro-grade camera</figcaption>
+              </figure>
+            </div>
+            <div class="home-newly_section2_text">
+              <p class="home-newly_section2_text_tit highContrastTarget">ISOCELL HP3</p>
+              <p class="home-newly_section2_text_desc highContrastTarget">With exquisite details of 200 million pixels, your next smartphone cameras will go beyond pro. Super ultra-high resolution. Perfect for nighttime shooting. Supercharged autofocus. Capture the image better than you want in just single shot with the ISOCELL HP3.</p>
+              <a href="/content/semiconductor/global/image-sensor/mobile-image-sensor/isocell-hp3.html" class="home-newly_section2_text_btn light-bg btn-large highContrastTarget" data-an-tr="body contents" data-an-ca="link click" data-an-ac="learn more" data-an-la="ISOCELL HP3">Learn more</a>
+            </div>
+            <ul class="home-newly_section2_info">
+              <li class="home-newly_section2_info_item">
+                <p class="home-newly_section2_info_tit">200MP</p>
+                <p class="home-newly_section2_info_desc">Resolution</p>
+              </li>
+              <li class="home-newly_section2_info_item">
+                <p class="home-newly_section2_info_tit">0.56μm</p>
+                <p class="home-newly_section2_info_desc">Pixel size</p>
+              </li>
+              <li class="home-newly_section2_info_item">
+                <p class="home-newly_section2_info_tit">Tetra² pixel</p>
+                <p class="home-newly_section2_info_desc">Color Filter</p>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+    <!-- //section 2 -->
+  </div>
+</div>
