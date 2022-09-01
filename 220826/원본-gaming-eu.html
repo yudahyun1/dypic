@@ -1,0 +1,1111 @@
+<link rel="stylesheet" href="/etc.clientlibs/semiconductor/components/global/content/statics/st-semi-hero-carousel/clientlibs/site.min.css" type="text/css" />
+
+<style>
+  .hero__popup[aria-hidden='true'] {
+    display: none;
+  }
+
+  .CO06_hero-carousel .CO06_hero-carousel-swiper-slide.infinityimg img {
+    object-fit: cover;
+  }
+
+  .CO06_hero-carousel .hero__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 101;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 40px 72px;
+  }
+
+  .CO06_hero-carousel .hero__popup[aria-hidden='true'] {
+    display: none;
+  }
+
+  .CO06_hero-carousel .hero__popup[aria-hidden='false'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .CO06_hero-carousel .hero__popup {
+      padding: 0;
+    }
+  }
+
+  .CO06_hero-carousel .hero__popup .heroBtnPlayVideoClose {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    background: url('/content/dam/samsung/semiconductor/products/pcd/memory_pcd_ssd/img/icon-regular-action-cancel-close.svg') no-repeat center/100%;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .CO06_hero-carousel .hero__popup .heroBtnPlayVideoClose {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .CO06_hero-carousel .hero__popup .hero__popup-con {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video embed,
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video iframe,
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video object,
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    .CO06_hero-carousel .hero__popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 101;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 40px 72px;
+    }
+
+    .CO06_hero-carousel .hero__popup[aria-hidden='true'] {
+      display: none;
+    }
+
+    .CO06_hero-carousel .hero__popup[aria-hidden='false'] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .CO06_hero-carousel .hero__popup {
+      padding: 0;
+    }
+  }
+
+  .CO06_hero-carousel .hero__popup .heroBtnPlayVideoClose {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    background: url('/content/dam/samsung/semiconductor/products/pcd/memory_pcd_ssd/img/icon-regular-action-cancel-close.svg') no-repeat center/100%;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .CO06_hero-carousel .hero__popup .heroBtnPlayVideoClose {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .CO06_hero-carousel .hero__popup .hero__popup-con {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video embed,
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video iframe,
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video object,
+  .CO06_hero-carousel .hero__popup .hero__popup-con .hero__popup-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .CO06_hero-carousel-text .title {
+    font: inherit;
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    font-size: 48px;
+    margin-bottom: 40px;
+    max-width: 560px;
+    position: relative;
+    left: 50%;
+  }
+
+  .CO06_hero-carousel .CO06_hero-carousel-swiper-slide .CO06_hero-carousel-text .subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    font-family: 'SamsungOne';
+    max-width: 560px;
+    position: relative;
+    left: 50%;
+  }
+
+  .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text {
+    top: 50%;
+    transform: translate(-55%, -50%);
+    text-align: left;
+    left: 50%;
+    padding: 0 24px;
+  }
+
+  .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text.left-title {
+    transform: translate(-97%, -50%);
+  }
+
+  .CO06_hero-carousel .CO06_hero-carousel-swiper-slide .CO06_hero-carousel-text {
+    max-width: 1156px;
+  }
+
+  .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text .source {
+    font-size: 12px;
+    color: #fff;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large {
+      height: 768px;
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text {
+      max-width: 344px;
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .CO06_hero-carousel-text .title {
+      font-size: 34px;
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-swiper-slide .CO06_hero-carousel-text .subtitle {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text .source {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text.left-title {
+      transform: translate(-100%, -50%);
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text.left-title .title,
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text.left-title .subtitle {
+      left: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text {
+      padding: 0 24px;
+      transform: translate(-50%, 0);
+      max-width: 100%;
+      left: 50%;
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .CO06_hero-carousel-text .title {
+      font-size: 24px;
+      left: 0;
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-swiper-slide .CO06_hero-carousel-text .subtitle {
+      font-size: 14px;
+      line-height: 20px;
+      left: 0;
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text .source {
+      left: 0;
+    }
+
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large .centerAlign .CO06_hero-carousel-text.left-title {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .CO06_hero-carousel .CO06_hero-carousel-swiper-slide .CO06_hero-carousel-text .title>div {
+    font-weight: bold;
+  }
+
+  @media(min-width:1024px) {
+    .CO06_hero-carousel .CO06_hero-carousel-mainSwiper.large {
+      height: 1080px;
+    }
+  }
+
+  .Memory_PCD_DRAM_value-proposition__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 40px 72px;
+  }
+
+  .Memory_PCD_DRAM_value-proposition__popup[aria-hidden='true'] {
+    display: none;
+  }
+
+  .Memory_PCD_DRAM_value-proposition__popup[aria-hidden='false'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .Memory_PCD_DRAM_value-proposition__popup {
+      padding: 0;
+    }
+  }
+
+  .Memory_PCD_DRAM_value-proposition__popup .btnPlayVideoClose {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 36px;
+    height: 36px;
+    background: url('/content/dam/samsung/semiconductor/products/pcd/memory_pcd_dram/img/icon-regular-action-cancel-close.svg') no-repeat center/100%;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .Memory_PCD_DRAM_value-proposition__popup .btnPlayVideoClose {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .Memory_PCD_DRAM_value-proposition__popup .Memory_PCD_DRAM_value-proposition__popup-con {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  .Memory_PCD_DRAM_value-proposition__popup .Memory_PCD_DRAM_value-proposition__popup-con .Memory_PCD_DRAM_value-proposition__popup-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+  }
+
+  .Memory_PCD_DRAM_value-proposition__popup .Memory_PCD_DRAM_value-proposition__popup-con .Memory_PCD_DRAM_value-proposition__popup-video video,
+  .Memory_PCD_DRAM_value-proposition__popup .Memory_PCD_DRAM_value-proposition__popup-con .Memory_PCD_DRAM_value-proposition__popup-video iframe,
+  .Memory_PCD_DRAM_value-proposition__popup .Memory_PCD_DRAM_value-proposition__popup-con .Memory_PCD_DRAM_value-proposition__popup-video object,
+  .Memory_PCD_DRAM_value-proposition__popup .Memory_PCD_DRAM_value-proposition__popup-con .Memory_PCD_DRAM_value-proposition__popup-video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .Memory_PCD_DRAM_value-proposition__header {
+      padding: 80px 32px 0;
+    }
+
+    .Memory_PCD_DRAM_value-proposition__header .Memory_PCD_DRAM_value-proposition__title {
+      line-height: 1.41;
+    }
+
+    .Memory_PCD_DRAM_value-proposition__header .Memory_PCD_DRAM_value-proposition__text {
+      font-size: 1.5rem;
+    }
+
+    .Memory_PCD_DRAM_value-proposition__thum {
+      margin-bottom: 0;
+    }
+
+    .Memory_PCD_DRAM_value-proposition__thum .article-header-playbtn:after {
+      width: 64px;
+      height: 64px;
+      background-size: 100%;
+    }
+
+    .Memory_PCD_DRAM_value-proposition-cont-wrap {
+      padding-top: 60px;
+    }
+  }
+</style>
+
+<div id="content" role="main">
+  <!-- content start -->
+  <!-- KV -->
+  <section class="feature gaming__intro">
+    <div class="intro__wrapper intro_fade">
+      <div class="gaming__container">
+        <div class="scene__content">
+          <div class="content__text">
+            <h2>
+              Simple upgrade,<br />
+              legendary wins
+            </h2>
+            <figure>
+              <picture>
+                <!-- pc image  -->
+                <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/intro_product_pc.png" />
+                <!-- tab image  -->
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/intro_product_tab.png" />
+                <!-- mobile image  -->
+                <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/intro_product_mobile.png" />
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/intro_pr.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="video_wrapper">
+      <picture class="video-poster">
+        <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/00_KV_PC.png" />
+        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/00_KV_TAB.png" />
+        <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/00_KV_MO.png" />
+        <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/00_KV_PC.png" alt="" />
+      </picture>
+      <video class="responsive-video video01" autoplay loop muted preload="metadata" playsinline data-pc-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_PC_NOTEXT.mp4?$VIDEO_HIGH$" data-tablet-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_TAB_01.mp4?$VIDEO_HIGH$" data-mobile-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_MO_01.mp4?$VIDEO_HIGH$">
+        <source class="source01" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_PC_NOTEXT.mp4?$VIDEO_HIGH$" type="video/mp4" />
+        <source class="source01" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_PC_NOTEXT.mp4?$VIDEO_HIGH$" type="video/webm" />
+      </video>
+      <!-- <video class="video_pc kv_play"  autoplay muted loop preload="metadata" playsinline>
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_PC_01.mp4"
+            type="video/mp4" />
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_PC_01.mp4"
+            type="video/webm" />
+        </video>
+        <video class="video_tab kv_play" autoplay muted loop preload="metadata" playsinline>
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_TAB_01.mp4?$VIDEO_HIGH$"
+            type="video/mp4" />
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_TAB_01.mp4?$VIDEO_HIGH$"
+            type="video/webm" />
+        </video>
+        <video class="video_mobile kv_play" autoplay muted loop preload="metadata" playsinline>
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_MO_01.mp4?$VIDEO_HIGH$"
+            type="video/mp4" />
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_MO_01.mp4?$VIDEO_HIGH$"
+            type="video/webm" />
+        </video> -->
+    </div>
+    <div class="logo-alt">
+      <figure>
+        <picture>
+          <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/logo_copy.png" alt="" />
+        </picture>
+      </figure>
+    </div>
+  </section>
+  <!-- interation scroll 01-->
+  <section class="feature gaming__rolling">
+    <div class="video_wrapper">
+      <picture class="video-poster">
+        <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/00_Intro_PC.png" />
+        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/00_Intro_TAB.png" />
+        <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/00_Intro_MO.png" />
+        <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/00_Intro_PC.png" alt="" />
+      </picture>
+      <video class="responsive-video video02" autoplay muted loop preload="metadata" playsinline data-pc-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_PC.mp4?$VIDEO_HIGH$" data-tablet-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_TAB.mp4?$VIDEO_HIGH$" data-mobile-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_MO.mp4?$VIDEO_HIGH$">
+        <source class="source02" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_PC.mp4?$VIDEO_HIGH$" type="video/mp4" />
+        <source class="source02" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_PC.mp4?$VIDEO_HIGH$" type="video/webm" />
+      </video>
+      <!-- <video class="video_pc resizeVideo" autoplay muted loop preload="metadata" playsinline>
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_PC.mp4"
+            type="video/mp4" />
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_PC.mp4"
+            type="video/webm" />
+        </video>
+        <video class="video_tab resizeVideo" autoplay muted loop preload="metadata" playsinline>
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_TAB.mp4"
+            type="video/mp4" />
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_TAB.mp4"
+            type="video/webm" />
+        </video>
+        <video class="video_mobile resizeVideo" autoplay muted loop preload="metadata" playsinline>
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_MO.mp4"
+            type="video/mp4" />
+          <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_MO.mp4"
+            type="video/webm" />
+        </video> -->
+    </div>
+    <div class="scroll__wrapper">
+      <div class="gaming__container">
+        <div class="scroll__content">
+          <div class="content__line top">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gm02_top_line.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__text">
+            <p>
+              Unleash peak gaming<br />
+              with perfect storage
+            </p>
+            <p class="txt">
+              Grow in power with next-level memory.<br />
+              Smash stall times, expand your game domain, <br />
+              and clinch the win.
+            </p>
+          </div>
+          <div class="content__line bottom">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gm02_bottom_line.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- hero page start -->
+  <section class="feature">
+    <div class="CO06_hero-carousel">
+      <div class="swiper-container CO06_hero-carousel-mainSwiper large" data-loop="true">
+        <ul class="swiper-wrapper CO06_hero-carousel-swiper-wrapper">
+          <!-- /* 영상있는 li에는 addVideo 클래스 필수 */ -->
+
+          <li class="swiper-slide CO06_hero-carousel-swiper-slide centerAlign centerAlignTablet centerAlignMobile infinityimg ab-submenu addVideo" data-caption="Faster">
+            <div>
+              <dl class="CO06_hero-carousel-text">
+                <dt class="title highContrastTarget">
+                  <div class="pc">Faster</div>
+                  <div class="ta">Faster</div>
+                  <div class="mo">Faster</div>
+                </dt>
+                <dt class="subtitle highContrastTarget">Blast past load screens. Now on both PC and console, stay immersed in epic action more of the time. Blazing read/write speeds let you outmaneuver opponents with phenomenal agility. Seize victory with max possible performance of PCIe® 4.0.</dt>
+                <!-- <dd class="desc">description here description here description here</dd> -->
+                <!--/* cta 없는 경우 태그 삭제 */-->
+                <!-- <dd class="cta">
+                  <a href="/content/semiconductor/global/consumer-storage/magician.html" class="dark-bg btn-large highContrastTarget" data-an-tr="hero-carousel" data-an-ca="link click" data-an-ac="learn more" data-an-la="magician">Learn more</a>
+                </dd> -->
+              </dl>
+
+              <picture class="video-poster">
+                <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/faster_pc_NOTEXT_2.png" />
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/faster_tab_NOTEXT_2.png" />
+                <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/faster_tab_NOTEXT_3.png" />
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/faster_pc_NOTEXT_2.png" alt="" />
+              </picture>
+              <video class="carousel-video" muted preload="metadata" playsinline data-pc-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_PC_01.mp4?$VIDEO_HIGH$" data-tablet-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_TAB_01.mp4?$VIDEO_HIGH$" data-mobile-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_MO_01.mp4?$VIDEO_HIGH$">
+                <source class="source1" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_PC_01.mp4?$VIDEO_HIGH$" type="video/mp4" />
+                <source class="source1" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_PC_01.mp4?$VIDEO_HIGH$" type="video/webm" />
+              </video>
+              <!-- <video class="video_pc" autoplay muted loop preload="metadata" playsinline>
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_PC.mp4" type="video/mp4" />
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_PC.mp4" type="video/webm" />
+                </video>
+                <video class="video_tab" autoplay muted loop preload="metadata" playsinline>
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_TAB.mp4" type="video/mp4" />
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_TAB.mp4" type="video/webm" />
+                </video>
+                <video class="video_mobile" autoplay muted loop preload="metadata" playsinline>
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_MO.mp4" type="video/mp4" />
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider01_Faster_MO.mp4" type="video/webm" />
+                </video> -->
+            </div>
+          </li>
+          <li class="swiper-slide CO06_hero-carousel-swiper-slide centerAlign centerAlignTablet centerAlignMobile infinityimg ab-submenu addVideo" data-caption="Stable">
+            <div>
+              <dl class="CO06_hero-carousel-text left-title">
+                <dt class="title highContrastTarget">
+                  <div class="pc">Stable</div>
+                  <div class="ta">Stable</div>
+                  <div class="mo">Stable</div>
+                </dt>
+                <dt class="subtitle highContrastTarget">Open fire on enemies while handling the heat. Full-3D graphic gaming marathons pose no threat to your winning streak. Samsung Memory's thermal control system keeps playing instant and cooling fans quiet. Stay frustration-free and in the zone during endless gaming action.</dt>
+                <!-- <dd class="desc">description here description here description here</dd> -->
+                <!--/* cta 없는 경우 태그 삭제 */-->
+                <!-- <dd class="cta">
+                  <a href="/content/semiconductor/global/consumer-storage/magician.html" class="dark-bg btn-large highContrastTarget" data-an-tr="hero-carousel" data-an-ca="link click" data-an-ac="learn more" data-an-la="magician">Learn more</a>
+                </dd> -->
+              </dl>
+
+              <picture class="video-poster">
+                <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/Slider02_Stable_PC.png" />
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/Slider02_Stable_TAB.png" />
+                <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/Slider02_Stable_MO.png" />
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Slider02_Stable_PC.png" alt="" />
+              </picture>
+              <video class="carousel-video" muted preload="metadata" playsinline data-pc-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Stable_PC.mp4?$VIDEO_HIGH$" data-tablet-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Stable_TAB.mp4?$VIDEO_HIGH$" data-mobile-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Stable_MO.mp4?$VIDEO_HIGH$">
+                <source class="source2" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Stable_PC.mp4?$VIDEO_HIGH$" type="video/mp4" />
+                <source class="source2" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Stable_PC.mp4?$VIDEO_HIGH$" type="video/webm" />
+              </video>
+              <!-- <video class="video_pc" autoplay muted loop preload="metadata" playsinline>
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Stable_PC.mp4" type="video/mp4" />
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Stable_PC.mp4" type="video/webm" />
+                </video>
+                <video class="video_tab" autoplay muted loop preload="metadata" playsinline>
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Stable_TAB.mp4" type="video/mp4" />
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Stable_TAB.mp4" type="video/webm" />
+                </video>
+                <video class="video_mobile" autoplay muted loop preload="metadata" playsinline>
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Faster_MO.mp4" type="video/mp4" />
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider02_Faster_MO.mp4" type="video/webm" />
+                </video> -->
+            </div>
+          </li>
+          <li class="swiper-slide CO06_hero-carousel-swiper-slide centerAlign centerAlignTablet centerAlignMobile infinityimg ab-submenu addVideo" data-caption="Reliable">
+            <div>
+              <dl class="CO06_hero-carousel-text">
+                <dt class="title highContrastTarget">
+                  <div class="pc">Reliable</div>
+                  <div class="ta">Reliable</div>
+                  <div class="mo">Reliable</div>
+                </dt>
+                <dt class="subtitle highContrastTarget">Conquer confidently with the world's No.1 flash memory brand. Samsung Memory ceaselessly redefines gameplay with smashing strides in advancing technology. Dive into epic titles with the most reliable storage for gamers everywhere.</dt>
+                <dt class="source">Source : 2003~2021 OMDIA data - NAND suppliers’ revenue market share.</dt>
+                <!-- <dd class="desc">description here description here description here</dd> -->
+                <!--/* cta 없는 경우 태그 삭제 */-->
+                <!-- <dd class="cta">
+                  <a href="/content/semiconductor/global/consumer-storage/magician.html" class="dark-bg btn-large highContrastTarget" data-an-tr="hero-carousel" data-an-ca="link click" data-an-ac="learn more" data-an-la="magician">Learn more</a>
+                </dd> -->
+              </dl>
+
+              <picture class="video-poster">
+                <source media="(min-width: 1024px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/Slider03_Reliable_PC.png" />
+                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/Slider03_Reliable_TAB.png" />
+                <source media="(min-width: 0px) and (max-width: 767px)" srcset="/content/dam/samsung/semiconductor/consumer-storage/gaming/Slider03_Reliable_MO.png" />
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Slider03_Reliable_PC.png" alt="" />
+              </picture>
+              <video class="carousel-video" muted preload="metadata" playsinline data-pc-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Reliable_PC.mp4?$VIDEO_HIGH$" data-tablet-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Reliable_TAB.mp4?$VIDEO_HIGH$" data-mobile-src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Reliable_MO.mp4?$VIDEO_HIGH$">
+                <source class="source3" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Reliable_PC.mp4?$VIDEO_HIGH$" type="video/mp4" />
+                <source class="source3" src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Reliable_PC.mp4?$VIDEO_HIGH$" type="video/webm" />
+              </video>
+              <!-- <video class="video_pc" autoplay muted loop preload="metadata" playsinline>
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Stable_PC.mp4" type="video/mp4" />
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Stable_PC.mp4" type="video/webm" />
+                </video>
+                <video class="video_tab" autoplay muted loop preload="metadata" playsinline>
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Stable_TAB.mp4" type="video/mp4" />
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Stable_TAB.mp4" type="video/webm" />
+                </video>
+                <video class="video_mobile" autoplay muted loop preload="metadata" playsinline>
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Faster_MO.mp4" type="video/mp4" />
+                    <source src="/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Slider03_Faster_MO.mp4" type="video/webm" />
+                </video> -->
+            </div>
+          </li>
+        </ul>
+        <div class="CO06_hero-carousel-swiper-navigation-group">
+          <div class="CO06_hero-carousel-swiper-pagination"></div>
+          <div class="CO06_hero-carousel-swiper-autoplay">
+            <button type="button" aria-label="autoplay start" class="btn-autoplay btn-start" data-an-tr="hero-carousel" data-an-ca="content click" data-an-ac="carousel play option" data-an-la="start"></button>
+            <button type="button" aria-label="autoplay pause" class="btn-autoplay btn-stop" data-an-tr="hero-carousel" data-an-ca="content click" data-an-ac="carousel play option" data-an-la="stop"></button>
+          </div>
+        </div>
+
+        <button type="button" class="CO06_hero-carousel-swiper-button-prev" data-an-tr="hero-carousel" data-an-ca="content click" data-an-ac="arrow left" data-an-la="none"></button>
+        <button type="button" class="CO06_hero-carousel-swiper-button-next" data-an-tr="hero-carousel" data-an-ca="content click" data-an-ac="arrow right" data-an-la="none"></button>
+      </div>
+
+      <!-- /* 비디오 팝업 영역  */ -->
+      <div id="" class="hero__popup" aria-hidden="true">
+        <div class="hero__popup-con">
+          <div class="hero__popup-video">
+            <!-- /* iframe에 title 속성 필수 입니다 (접근성관련) */ -->
+
+            <!--/* youtube */-->
+            <iframe title="Data Center:  PM9A3: Gen4 Drives Dynamic Data Traffic" style="width: 100%; height: 100%" src="https://www.youtube.com/embed/CTkQDcZznyc" frameborder="0" allowfullscreen></iframe>
+            <!--/* //youtube */-->
+          </div>
+        </div>
+        <button type="button" class="heroBtnPlayVideoClose" aria-label="close video popup" data-an-tr="body contents" data-an-ca="content click" data-an-ac="video popup close" data-an-la="none"></button>
+      </div>
+      <!-- /* 비디오 팝업 영역 */ -->
+    </div>
+  </section>
+  <!-- hero page end  -->
+
+  <!-- storage -->
+  <section class="feature gaming__storage">
+    <div class="gaming__container">
+      <div class="content__video__wrapper">
+        <div class="content__line top">
+          <figure>
+            <picture>
+              <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gm03_frame_top.png" alt="프레임상단" />
+            </picture>
+          </figure>
+        </div>
+        <div class="content__video">
+          <figure>
+            <picture>
+              <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gm03_storage_video.png" alt="video-img" />
+            </picture>
+          </figure>
+          <a href="#none" class="play-btn btnPlayVideoOpen" data-video-id="H8zAh3JVY5w" data-title="" title="video open" aria-labelledby="article-video-popup" aria-label="video play button" data-an-tr="value proposition" data-an-ca="content click" data-an-ac="play icon" data-an-la="H8zAh3JVY5w"></a>
+        </div>
+        <div class="content__line bottom">
+          <figure>
+            <picture>
+              <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gm03_frame_bottom.png" alt="프레임하단" />
+            </picture>
+          </figure>
+        </div>
+      </div>
+
+      <div class="content__title">
+        <h2>
+          Find the right boost<br />
+          for your play.
+        </h2>
+      </div>
+
+      <div class="content__wrapper">
+        <div class="content__box">
+          <div class="content__icon">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gm_icon01.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__name">
+            <h3>PC gamer</h3>
+          </div>
+
+          <div class="content__text">
+            <p>PC gamers crave searing speed and smooth action for a critical edge. Massive capacity handles your growing game library and quick loads make your worlds with spectacular graphics.</p>
+          </div>
+          <div class="content__action">
+            <a href="#pcGamer">Recommend</a>
+          </div>
+        </div>
+        <div class="content__box">
+          <div class="content__icon">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gm_icon02.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__name">
+            <h3>Console gamer</h3>
+          </div>
+          <div class="content__text">
+            <p>Console gamers thrive on huge capacity for next-gen games and classic favorites. Explore without overheating, with quick loads to jump right into battle.</p>
+          </div>
+          <div class="content__action">
+            <a href="#consoleGamer">Recommend</a>
+          </div>
+        </div>
+        <div class="content__box">
+          <div class="content__icon">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gm_icon03.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__name">
+            <h3>Game streamer</h3>
+          </div>
+          <div class="content__text">
+            <p>Game streamers need a blazing powerhouse to keep fans thrilled. Your awesome gameplay deserves awesome storage performance to encode and edit hi-res video without a hitch.</p>
+          </div>
+          <div class="content__action">
+            <a href="#gameStreamer">Recommend</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /* 비디오 팝업 영역 */ -->
+  <div id="article-video-popup" class="Memory_PCD_DRAM_value-proposition__popup" aria-hidden="true">
+    <div class="Memory_PCD_DRAM_value-proposition__popup-con">
+      <div class="Memory_PCD_DRAM_value-proposition__popup-video">
+        <!-- /* iframe에 title 속성 필수 입니다 (접근성관련) */ -->
+
+        <!--/* youtube */-->
+        <iframe title="" style="width: 100%; height: 100%" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+        <!--/* //youtube */-->
+      </div>
+    </div>
+    <button type="button" class="btnPlayVideoClose highContrastTarget" aria-label="close video popup" data-an-tr="value proposition" data-an-ca="content click" data-an-ac="video popup close" data-an-la="none"></button>
+  </div>
+  <!-- /* 비디오 팝업 영역 */ -->
+
+  <!-- scene 1-->
+  <section class="feature gaming__scene scene__content__01" id="pcGamer">
+    <div class="scene__wrapper">
+      <div class="gaming__container">
+        <div class="scene__content">
+          <div class="content__line top">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gamer_top.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__text">
+            <h2 data-aos="fade-up" data-aos-delay="0">PC gamer</h2>
+            <p data-aos="fade-up" data-aos-delay="100">PC gamers crave searing speed and smooth action for a critical edge. Massive capacity handles your growing game library and quick loads make your worlds with spectacular graphics.</p>
+          </div>
+          <div class="content__line bottom">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gamer_under.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-alt">
+      <figure>
+        <picture>
+          <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/logo_copy.png" alt="" />
+        </picture>
+      </figure>
+    </div>
+  </section>
+
+  <!-- content1 -->
+  <section class="feature gaming__contents content__01">
+    <div class="gaming__container">
+      <div class="content__title">
+        <h2 data-aos="fade-up" data-aos-delay="0">Storage for PC gaming</h2>
+      </div>
+      <div class="content__wrapper">
+        <div class="content__box" data-aos="fade-up" data-aos-delay="100">
+          <div class="content__name">
+            <h3>990 PRO</h3>
+            <span>PCIe 4.0, blistering speed for<br />endless victory</span>
+          </div>
+
+          <div class="content__image">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Product_990PRO.png" alt="990PRO" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__action">
+            <a href="/content/semiconductor/emea/consumer-storage/internal-ssd/990-pro.html">Learn more</a>
+          </div>
+        </div>
+        <div class="content__box" data-aos="fade-up" data-aos-delay="200">
+          <div class="content__name">
+            <h3>980 PRO</h3>
+            <span>PCIe 3.0, the smart boost to<br />
+              high-octane action</span>
+          </div>
+          <div class="content__image">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Product_980PRO.png" alt="980PRO" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__action">
+            <a href="/content/semiconductor/emea/consumer-storage/internal-ssd/980pro.html">Learn more</a>
+          </div>
+        </div>
+        <div class="content__box" data-aos="fade-up" data-aos-delay="300">
+          <div class="content__name">
+            <h3>870 EVO</h3>
+            <span>SATA interface, renowned<br />reliability from leading<br />technology</span>
+          </div>
+          <div class="content__image">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Product_870EVO.png" alt="870EVO" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__action">
+            <a href="/content/semiconductor/emea/consumer-storage/internal-ssd/870evo.html">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- scene 2-->
+  <section class="feature gaming__scene scene__content__02" id="consoleGamer">
+    <div class="scene__wrapper">
+      <div class="gaming__container">
+        <div class="scene__content">
+          <div class="content__line top">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gamer_top.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__text">
+            <h2 data-aos="fade-up" data-aos-delay="0">Console gamer</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Console gamers thrive on huge capacity for next-gen games and classic favorites. Explore without overheating, with quick loads to jump right into battle.</p>
+          </div>
+          <div class="content__line bottom">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gamer_under.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- content 2 -->
+  <section class="feature gaming__contents content__02">
+    <div class="gaming__container">
+      <div class="content__title">
+        <h2 data-aos="fade-up" data-aos-delay="0">Compatible consoles</h2>
+      </div>
+      <div class="content__wrapper">
+        <div class="content__box" data-aos="fade-up" data-aos-delay="100">
+          <div class="content__top-title">
+            <p class="line-h">PlayStation 5</p>
+          </div>
+          <div class="content__name">
+            <h3>990 PRO with Heatsink</h3>
+            <span>PS5 compatible, prevents<br />throttling so you stay locked in</span>
+          </div>
+          <div class="content__image">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Product_990PRO-Heatsink.png" alt="990PRO-Heatsink" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__action">
+            <a href="/content/semiconductor/emea/consumer-storage/internal-ssd/990-pro-with-heatsink.html">Learn more</a>
+          </div>
+        </div>
+        <div class="content__box" data-aos="fade-up" data-aos-delay="200">
+          <div class="content__top-title">
+            <p>Xbox<br />PlayStation</p>
+          </div>
+          <div class="content__name">
+            <h3>T7 Shield</h3>
+            <span>Expand to a vast library with 2TB<br />of super fast portable storage</span>
+          </div>
+          <div class="content__image">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Product_T7-shield.png" alt="T7-shield" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__action">
+            <a href="/content/semiconductor/emea/consumer-storage/portable-ssd/t7-shield.html">Learn more</a>
+          </div>
+        </div>
+        <div class="content__box" data-aos="fade-up" data-aos-delay="300">
+          <div class="content__top-title">
+            <p>
+              Nintendo switch<br />
+              Steam deck
+            </p>
+          </div>
+          <div class="content__name">
+            <h3>PRO Plus l EVO Plus</h3>
+            <span>Make your library complete, no<br />need to delete.</span>
+          </div>
+          <div class="content__image">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Product_PROplus-EVOplus.png" alt="PROplus,EVOplus" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__action">
+            <a href="/content/semiconductor/emea/consumer-storage/memory-card/micro-sd-pro-endurance.html">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-alt">
+      <figure>
+        <picture>
+          <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/logo_copy.png" alt="" />
+        </picture>
+      </figure>
+    </div>
+  </section>
+
+  <!-- scene 03-->
+  <section class="feature gaming__scene scene__content__03" id="gameStreamer">
+    <div class="scene__wrapper">
+      <div class="gaming__container">
+        <div class="scene__content">
+          <div class="content__line top">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gamer_top.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__text">
+            <h2 data-aos="fade-up" data-aos-delay="0">Game streamer</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Game streamers need a blazing powerhouse to keep fans thrilled. Your awesome gameplay deserves awesome storage performance to encode and edit hi-res video without a hitch.</p>
+          </div>
+          <div class="content__line bottom">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/gamer_under.png" alt="" />
+              </picture>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- content 3 -->
+  <section class="feature gaming__contents content__03">
+    <div class="gaming__container">
+      <div class="content__title">
+        <h2 data-aos="fade-up" data-aos-delay="0">Streaming solutions for game streamer</h2>
+      </div>
+      <div class="content__wrapper">
+        <div class="content__box" data-aos="fade-up" data-aos-delay="100">
+          <div class="content__name">
+            <h3>990 PRO</h3>
+            <span>Stream seamless, thrilling play to<br />fans worldwide</span>
+          </div>
+
+          <div class="content__image">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Product_990PRO.png" alt="990PRO" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__action">
+            <a href="/content/semiconductor/emea/consumer-storage/internal-ssd/990-pro.html">Learn more</a>
+          </div>
+        </div>
+        <div class="content__box" data-aos="fade-up" data-aos-delay="200">
+          <div class="content__name">
+            <h3>980 PRO</h3>
+            <span>Show off your triumphs and live<br />streams non-stop</span>
+          </div>
+          <div class="content__image">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Product_980PRO.png" alt="980PRO" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__action">
+            <a href="/content/semiconductor/emea/consumer-storage/internal-ssd/980pro.html">Learn more</a>
+          </div>
+        </div>
+        <div class="content__box" data-aos="fade-up" data-aos-delay="300">
+          <div class="content__name">
+            <h3>870 EVO</h3>
+            <span>Keep your heroic wins safe and<br />share your best scenes.</span>
+          </div>
+          <div class="content__image">
+            <figure>
+              <picture>
+                <img src="/content/dam/samsung/semiconductor/consumer-storage/gaming/Product_870EVO.png" alt="870EVO" />
+              </picture>
+            </figure>
+          </div>
+          <div class="content__action">
+            <a href="/content/semiconductor/emea/consumer-storage/internal-ssd/870evo.html">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- conent end -->
+
+<!--/* co06 컴포넌트 JS (defer 필수) */-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<!-- <script src="/etc.clientlibs/semiconductor/components/global/content/statics/st-semi-hero-carousel/clientlibs/site.min.js" defer></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script>
+  setTimeout(function () {
+    setInterval(function () {
+      $('.intro_fade').animate(
+        {
+          opacity: 1,
+        },
+        500
+      );
+    }, 1000);
+  }, 3500);
+
+  let IntroVideo = document.querySelector('.responsive-video');
+
+  $(function () {
+    if (matchMedia('screen and (max-width: 767px)').matches) {
+      $('.video01 .source01').attr('src', '/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_MO_01.mp4?$VIDEO_HIGH$');
+      $('.video02 .source02').attr('src', '/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_MO.mp4?$VIDEO_HIGH$');
+      console.log('mobile');
+    } else if (matchMedia('screen and (max-width: 1023px)').matches) {
+      $('.video01 .source01').attr('src', '/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_TAB_01.mp4?$VIDEO_HIGH$');
+      $('.video02 .source02').attr('src', '/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_TAB.mp4?$VIDEO_HIGH$');
+      $('.gaming__rolling').css('height', '4000px');
+    } else if (matchMedia('screen and (min-width: 1024px)').matches) {
+      $('.video01 .source01').attr('src', '/content/dam/samsung/semiconductor/consumer-storage/gaming/video/KV_PC_NOTEXT.mp4?$VIDEO_HIGH$');
+      $('.video02 .source02').attr('src', '/content/dam/samsung/semiconductor/consumer-storage/gaming/video/Intro_PC.mp4?$VIDEO_HIGH$');
+      console.log('desktop');
+    }
+    IntroVideo.load();
+    IntroVideo.play();
+  });
+</script>
